@@ -10,7 +10,7 @@ const AboutSubject: React.FC = () => {
         <div className="relative w-full md:w-1/2 flex justify-center">
           {/* Large Typography in Background */}
           <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none">
-            <span className="text-[40vw] font-serif font-black text-white/[0.03] leading-none transform -translate-y-10">
+            <span className="text-[60vw] md:text-[40vw] font-serif font-black text-white/[0.08] md:text-white/[0.03] leading-none transform -translate-y-10">
               Z.
             </span>
           </div>

@@ -44,33 +44,59 @@ const ProofSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Mobile Gallery - Grid Layout */}
-        <div className="grid grid-cols-2 gap-3 md:hidden max-w-2xl mx-auto">
-          {BTS_PHOTOS.map((photo, idx) => (
-            <div
-              key={idx}
-              className="relative group rounded-lg overflow-hidden aspect-[3/4]"
-            >
-              <img
-                className="h-full w-full object-cover object-center filter grayscale"
-                src={photo.image}
-                alt={photo.project}
-                loading="lazy"
-              />
-
-              {/* Project Info Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent flex items-end p-3">
-                <div>
-                  <p className="text-[8px] tracking-widest uppercase text-brand-green font-bold mb-0.5">
-                    BTS
-                  </p>
-                  <h3 className="font-serif text-xs text-brand-cream">
-                    {photo.project}
-                  </h3>
+        {/* Mobile Gallery - Grouped by Project */}
+        <div className="md:hidden max-w-2xl mx-auto space-y-8">
+          {/* Agentschap Inburgering - 3 photos in grid */}
+          <div>
+            <h4 className="text-sm tracking-widest uppercase text-brand-green mb-3 font-bold">Agentschap Inburgering</h4>
+            <div className="grid grid-cols-3 gap-2">
+              {BTS_PHOTOS.slice(0, 3).map((photo, idx) => (
+                <div key={idx} className="relative rounded-lg overflow-hidden aspect-square">
+                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={photo.project} loading="lazy" />
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Deloitte - Single large photo */}
+          <div>
+            <h4 className="text-sm tracking-widest uppercase text-brand-green mb-3 font-bold">Deloitte</h4>
+            <div className="relative rounded-lg overflow-hidden aspect-[16/10]">
+              <img className="h-full w-full object-cover object-center filter grayscale" src={BTS_PHOTOS[3].image} alt={BTS_PHOTOS[3].project} loading="lazy" />
+            </div>
+          </div>
+
+          {/* Lidl Campaign - 3 photos in grid */}
+          <div>
+            <h4 className="text-sm tracking-widest uppercase text-brand-green mb-3 font-bold">Lidl Campaign</h4>
+            <div className="grid grid-cols-3 gap-2">
+              {BTS_PHOTOS.slice(4, 7).map((photo, idx) => (
+                <div key={idx} className="relative rounded-lg overflow-hidden aspect-square">
+                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={photo.project} loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tejo Campaign - Single large photo */}
+          <div>
+            <h4 className="text-sm tracking-widest uppercase text-brand-green mb-3 font-bold">Tejo Campaign</h4>
+            <div className="relative rounded-lg overflow-hidden aspect-[16/10]">
+              <img className="h-full w-full object-cover object-center filter grayscale" src={BTS_PHOTOS[7].image} alt={BTS_PHOTOS[7].project} loading="lazy" />
+            </div>
+          </div>
+
+          {/* STERK Project - 2 photos side by side */}
+          <div>
+            <h4 className="text-sm tracking-widest uppercase text-brand-green mb-3 font-bold">STERK Project</h4>
+            <div className="grid grid-cols-2 gap-2">
+              {BTS_PHOTOS.slice(8, 10).map((photo, idx) => (
+                <div key={idx} className="relative rounded-lg overflow-hidden aspect-square">
+                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={photo.project} loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -80,6 +106,7 @@ const ProofSection: React.FC = () => {
           id: `${logo.name}-${i}`,
           description: logo.name,
           image: logo.image,
+          className: logo.className,
         }))}
         className="border-y border-brand-cream/5"
       />

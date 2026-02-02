@@ -17,8 +17,8 @@ const Process: React.FC = () => {
         <div className="hidden md:block absolute top-1/4 left-0 w-full h-[1px] bg-brand-black/10 -z-0" />
 
         {PROCESS_STEPS.map((step) => (
-          <div key={step.number} className="relative z-10 group">
-            <div className="bg-brand-black text-brand-cream w-16 h-16 rounded-full flex items-center justify-center text-xl font-serif mb-8 group-hover:bg-brand-green transition-colors duration-500">
+          <div key={step.number} className="relative z-10 group text-center md:text-left">
+            <div className="bg-brand-black text-brand-cream w-16 h-16 rounded-full flex items-center justify-center text-xl font-serif mb-8 group-hover:bg-brand-green transition-colors duration-500 mx-auto md:mx-0">
               {step.number}
             </div>
             <h3 className="text-3xl font-serif italic mb-6">{step.title}</h3>

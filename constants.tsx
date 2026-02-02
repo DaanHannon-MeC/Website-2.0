@@ -84,13 +84,13 @@ export const BTS_PHOTOS = [
 ];
 
 export const BRAND_LOGOS = [
-  { name: 'NIO', image: '/assets/logos/NIO_logo.svg.png' },
-  { name: 'Albert Heijn', image: '/assets/logos/Albert_Heijn_Logo.svg.png' },
-  { name: 'Stad Mechelen', image: '/assets/logos/mechelen.png' },
-  { name: 'Agentschap Inburgering', image: '/assets/logos/Agentschap inburgering.jpeg' },
-  { name: 'KU Leuven', image: '/assets/logos/KU-Leuven-logo.png' },
-  { name: 'Thuis', image: '/assets/logos/ThuisLogo2025.png' },
-  { name: 'ELGi', image: '/assets/logos/ELGi_Equipments_Logo_(2020).png' },
+  { name: 'NIO', image: '/assets/logos/NIO_logo.svg.png', className: '' },
+  { name: 'Albert Heijn', image: '/assets/logos/Albert_Heijn_Logo.svg.png', className: '' },
+  { name: 'Stad Mechelen', image: '/assets/logos/mechelen.png', className: 'h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all mix-blend-multiply' },
+  { name: 'Agentschap Inburgering', image: '/assets/logos/Agentschap inburgering.jpeg', className: 'h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all mix-blend-multiply' },
+  { name: 'KU Leuven', image: '/assets/logos/KU-Leuven-logo.png', className: '' },
+  { name: 'Thuis', image: '/assets/logos/ThuisLogo2025.png', className: '' },
+  { name: 'ELGi', image: '/assets/logos/ELGi_Equipments_Logo_(2020).png', className: '' },
 ];
 
 export const POSTAL_DATA = [
