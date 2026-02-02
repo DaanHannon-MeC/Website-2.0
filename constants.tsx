@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     id: '1',
     title: 'NIO Documentary',
     category: 'Documentary',
-    thumbnail: '/assets/bts/Frame - Portfolio.jpg',
+    thumbnail: '/assets/thumbnails/Thumb Nio.png',
     videoUrl: '/assets/videos/NIO Documentary.mp4',
     aspectRatio: 'wide'
   },
@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
     id: '2',
     title: 'Stad Mechelen Campagne',
     category: 'Commercial Campaign',
-    thumbnail: '/assets/bts/Bts.jpg',
+    thumbnail: '/assets/thumbnails/Thumb Mechelen.png',
     videoUrl: '/assets/videos/Stad Mechelen Campagne.mp4',
     aspectRatio: 'wide'
   },
@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     id: '3',
     title: 'Agentschap Inburgering & Integratie',
     category: 'Commercial Campaign',
-    thumbnail: '/assets/bts/bts 1.jpg',
+    thumbnail: '/assets/thumbnails/Thumb Agentschap inburgering.png',
     videoUrl: '/assets/videos/Agentschap Inburgering & Integratie_Comercial Campaign.mp4',
     aspectRatio: 'wide'
   },
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     id: '4',
     title: 'Albert Heijn Nieuwjaarsduik',
     category: 'Social Media Content',
-    thumbnail: '/assets/bts/bts 2.jpg',
+    thumbnail: '/assets/thumbnails/Thumb Albert Heijn.png',
     videoUrl: '/assets/videos/AH_NIEUWJAARSDUIK_Social media Content.mp4',
     aspectRatio: 'wide'
   },
@@ -38,16 +38,16 @@ export const PROJECTS: Project[] = [
     id: '5',
     title: 'IMPACT',
     category: 'Commercial',
-    thumbnail: '/assets/bts/daan-story.jpg',
+    thumbnail: '/assets/thumbnails/Thumb Impact.png',
     videoUrl: '/assets/videos/IMPACT - Commercial.mp4',
     aspectRatio: 'wide'
   },
   {
     id: '6',
-    title: 'Daphne Paelinck - Christine',
-    category: 'Music Video',
-    thumbnail: '/assets/bts/Frame - Portfolio.jpg',
-    videoUrl: '/assets/videos/Daphne Paelinck - Christine Edit V2.mp4',
+    title: 'Thuis',
+    category: 'Social Content',
+    thumbnail: '/assets/thumbnails/Thumb Thuis.png',
+    videoUrl: '/assets/videos/Thuis - Social Content.mp4',
     aspectRatio: 'wide'
   }
 ];
@@ -71,10 +71,18 @@ export const PROCESS_STEPS: Step[] = [
 ];
 
 export const BTS_PHOTOS = [
-  '/assets/bts/Bts.jpg',
-  '/assets/bts/bts 1.jpg',
-  '/assets/bts/bts 2.jpg',
-  '/assets/bts/daan-story.jpg',
+  { image: '/assets/bts/Bts - Agentschap Inburgering en Integratie.jpg', project: 'Agentschap Inburgering' },
+  { image: '/assets/bts/bts 1 - Agentschap Inburgering en Integratie.jpg', project: 'Agentschap Inburgering' },
+  { image: '/assets/bts/bts 2 - Agentschap Inburgering en Integratie.jpg', project: 'Agentschap Inburgering' },
+  { image: '/assets/bts/Bts - Deloitte.jpg', project: 'Deloitte' },
+  { image: '/assets/bts/BTS_LIDL-286.jpg', project: 'Lidl Campaign' },
+  { image: '/assets/bts/BTS_LIDL-518.jpg', project: 'Lidl Campaign' },
+  { image: '/assets/bts/BTS_LIDL-666.jpg', project: 'Lidl Campaign' },
+  { image: '/assets/bts/BTS_TEJOCAMPAGNE-3.jpg', project: 'Tejo Campaign' },
+  { image: '/assets/bts/Bts STERK 2.jpg', project: 'STERK Project' },
+  { image: '/assets/bts/Bts sterk.jpg', project: 'STERK Project' },
+  { image: '/assets/bts/Frame - Portfolio.jpg', project: 'Portfolio Shoot' },
+  { image: '/assets/bts/Subject 3.png', project: 'Studio Session' },
 ];
 
 export const BRAND_LOGOS = [
