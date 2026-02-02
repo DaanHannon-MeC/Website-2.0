@@ -1,15 +1,15 @@
-
 import React, { useRef, useState, useEffect } from 'react';
 import VideoModal from './VideoModal';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
 
-const PortfolioItem: React.FC<{ 
-  project: Project; 
-  depth: number; 
+const PortfolioItem: React.FC<{
+  project: Project;
+  depth: number;
   onHover: (hovering: boolean) => void;
-  mousePos: { x: number, y: number }
-}> = ({ project, depth, onHover, mousePos }) => {
+  mousePos: { x: number, y: number };
+  onClick: () => void;
+}> = ({ project, depth, onHover, mousePos, onClick }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -54,11 +54,12 @@ const PortfolioItem: React.FC<{
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
-      className={`relative group cursor-none mb-32 md:mb-0`}
+      className={`relative group cursor-pointer mb-32 md:mb-0`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
       style={getParallaxStyle()}
     >
       <div
@@ -97,6 +98,18 @@ const PortfolioItem: React.FC<{
 const Portfolio: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHoveringItem, setIsHoveringItem] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -112,7 +125,7 @@ const Portfolio: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-brand-black py-40 overflow-hidden px-8 md:px-20">
       {/* Custom Mouse Indicator */}
-      <div 
+      <div
         className="custom-cursor flex items-center justify-center pointer-events-none"
         style={{
           transform: `translate3d(${mousePos.x}px, ${mousePos.y}px, 0)`,
@@ -130,64 +143,77 @@ const Portfolio: React.FC = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         {/* Item 1 */}
         <div className="md:col-span-6 md:translate-y-12">
-          <PortfolioItem 
-            project={PROJECTS[0]} 
-            depth={depths[0]} 
-            onHover={setIsHoveringItem} 
-            mousePos={mousePos} 
+          <PortfolioItem
+            project={PROJECTS[0]}
+            depth={depths[0]}
+            onHover={setIsHoveringItem}
+            mousePos={mousePos}
+            onClick={() => handleProjectClick(PROJECTS[0])}
           />
         </div>
 
         {/* Item 2 */}
         <div className="md:col-span-5 md:col-start-8">
-          <PortfolioItem 
-            project={PROJECTS[1]} 
-            depth={depths[1]} 
-            onHover={setIsHoveringItem} 
-            mousePos={mousePos} 
+          <PortfolioItem
+            project={PROJECTS[1]}
+            depth={depths[1]}
+            onHover={setIsHoveringItem}
+            mousePos={mousePos}
+            onClick={() => handleProjectClick(PROJECTS[1])}
           />
         </div>
 
         {/* Item 3 */}
         <div className="md:col-span-4 md:translate-x-12">
-          <PortfolioItem 
-            project={PROJECTS[2]} 
-            depth={depths[2]} 
-            onHover={setIsHoveringItem} 
-            mousePos={mousePos} 
+          <PortfolioItem
+            project={PROJECTS[2]}
+            depth={depths[2]}
+            onHover={setIsHoveringItem}
+            mousePos={mousePos}
+            onClick={() => handleProjectClick(PROJECTS[2])}
           />
         </div>
 
         {/* Item 4 */}
         <div className="md:col-span-7 md:translate-y-24">
-          <PortfolioItem 
-            project={PROJECTS[3]} 
-            depth={depths[3]} 
-            onHover={setIsHoveringItem} 
-            mousePos={mousePos} 
+          <PortfolioItem
+            project={PROJECTS[3]}
+            depth={depths[3]}
+            onHover={setIsHoveringItem}
+            mousePos={mousePos}
+            onClick={() => handleProjectClick(PROJECTS[3])}
           />
         </div>
 
         {/* Item 5 */}
         <div className="md:col-span-5">
-          <PortfolioItem 
-            project={PROJECTS[4]} 
-            depth={depths[4]} 
-            onHover={setIsHoveringItem} 
-            mousePos={mousePos} 
+          <PortfolioItem
+            project={PROJECTS[4]}
+            depth={depths[4]}
+            onHover={setIsHoveringItem}
+            mousePos={mousePos}
+            onClick={() => handleProjectClick(PROJECTS[4])}
           />
         </div>
 
         {/* Item 6 */}
         <div className="md:col-span-4 md:col-start-8 md:-translate-y-32">
-          <PortfolioItem 
-            project={PROJECTS[5]} 
-            depth={depths[5]} 
-            onHover={setIsHoveringItem} 
-            mousePos={mousePos} 
+          <PortfolioItem
+            project={PROJECTS[5]}
+            depth={depths[5]}
+            onHover={setIsHoveringItem}
+            mousePos={mousePos}
+            onClick={() => handleProjectClick(PROJECTS[5])}
           />
         </div>
       </div>
+
+      {/* Video Modal */}
+      <VideoModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 };
