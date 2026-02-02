@@ -24,10 +24,10 @@ const Logos3 = ({
   className = "",
 }: Logos3Props) => {
   return (
-    <section className={`py-24 ${className}`}>
+    <section className={`py-24 bg-brand-cream ${className}`}>
       {heading && (
         <div className="container flex flex-col items-center text-center mb-16">
-          <h2 className="text-2xl font-bold text-pretty lg:text-4xl font-serif italic">
+          <h2 className="text-2xl font-bold text-pretty lg:text-4xl font-serif italic text-brand-black">
             {heading}
           </h2>
         </div>
@@ -47,15 +47,15 @@ const Logos3 = ({
                   <img
                     src={logo.image}
                     alt={logo.description}
-                    className={logo.className || "h-8 md:h-12 w-auto object-contain filter grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all"}
+                    className={logo.className || "h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"}
                   />
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-black to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-brand-black to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-cream to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-brand-cream to-transparent z-10 pointer-events-none"></div>
       </div>
     </section>
   );

@@ -43,22 +43,45 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="bg-brand-cream/5 rounded-3xl p-4 md:p-8 border border-brand-green/10 backdrop-blur-sm min-h-[600px] flex flex-col">
-          {/* Google Calendar Embed Placeholder */}
-          <div className="flex-grow flex items-center justify-center border-2 border-dashed border-brand-green/20 rounded-2xl p-12 text-center group transition-all hover:border-brand-green/40">
-            <div className="max-w-xs">
-              <div className="w-20 h-20 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-brand-green">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+          <h3 className="text-2xl font-serif mb-6 text-center">Kies je optie</h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Kennismakingsgesprek */}
+            <a
+              href="https://calendar.app.google/brhH4yug1Upcvn5dA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-cream/10 border border-brand-green/20 rounded-xl p-6 text-center hover:border-brand-green/40 hover:bg-brand-cream/15 transition-all group"
+            >
+              <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-green/20 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-brand-green">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-serif mb-4">Boek een intake babbel</h3>
-              <p className="text-brand-cream/40 mb-8">Selecteer een datum voor een online kennismaking van 30 minuten.</p>
-              <button className="bg-brand-green text-brand-cream w-full py-4 rounded-full font-bold tracking-tight hover:bg-brand-green/80 transition-all">
-                Agenda Openen
-              </button>
-            </div>
+              <h4 className="font-bold text-lg mb-2">Kennismakingsgesprek</h4>
+              <p className="text-sm text-brand-cream/60 mb-4">30 minuten om elkaar te leren kennen</p>
+              <span className="text-brand-green font-bold text-sm">Plan een Babbel →</span>
+            </a>
+
+            {/* Direct Booking */}
+            <a
+              href="https://calendar.app.google/XKjMXfBMbewQ5MKc6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-green/10 border border-brand-green/40 rounded-xl p-6 text-center hover:border-brand-green hover:bg-brand-green/15 transition-all group"
+            >
+              <div className="w-16 h-16 bg-brand-green/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-green/30 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-brand-green">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
+              </div>
+              <h4 className="font-bold text-lg mb-2">Direct een Shoot Boeken</h4>
+              <p className="text-sm text-brand-cream/60 mb-4">Klaar om te beginnen? Boek meteen</p>
+              <span className="text-brand-green font-bold text-sm">Boek een Draaidag →</span>
+            </a>
           </div>
-          <p className="text-center text-[10px] tracking-widest uppercase text-brand-cream/30 mt-6">Powered by Google Calendar</p>
+
+          <p className="text-center text-[10px] tracking-widest uppercase text-brand-cream/30">Powered by Google Calendar</p>
         </div>
       </div>
     </div>
