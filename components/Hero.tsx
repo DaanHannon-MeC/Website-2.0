@@ -18,13 +18,13 @@ const DigitRoll: React.FC<{ digit: string; isSpinning: boolean }> = ({ digit, is
   }, [isSpinning, digit]);
 
   return (
-    <div className="h-16 overflow-hidden relative w-8 md:w-10">
-      <div 
+    <div className="h-12 md:h-16 overflow-hidden relative w-full">
+      <div
         className="transition-transform duration-1000 cubic-bezier(0.23, 1, 0.32, 1) flex flex-col items-center"
-        style={{ transform: `translateY(-${offset * 4}rem)` }}
+        style={{ transform: `translateY(-${offset * (window.innerWidth < 768 ? 3 : 4)}rem)` }}
       >
         {digits.map((d) => (
-          <span key={d} className="h-16 flex items-center justify-center font-serif text-5xl italic text-brand-green tracking-tighter">
+          <span key={d} className="h-12 md:h-16 flex items-center justify-center font-serif text-4xl md:text-5xl italic text-brand-green tracking-tighter">
             {d}
           </span>
         ))}
@@ -102,22 +102,22 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Horizontal Odometer */}
-      <div className="absolute bottom-12 right-12 hidden md:flex flex-col items-end gap-2 group cursor-default">
-        <div className="flex items-center gap-4">
+      {/* Vertical Odometer */}
+      <div className="absolute bottom-12 right-8 md:right-12 flex flex-row md:flex-col items-center md:items-end gap-4 md:gap-2 group cursor-default">
+        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
            <div className={`w-2 h-2 rounded-full ${isSpinning ? 'bg-brand-green animate-pulse' : 'bg-brand-green shadow-[0_0_10px_rgba(85,139,110,0.8)]'}`}></div>
-           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-cream/40 font-bold">
+           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-cream/40 font-bold whitespace-nowrap">
              {isSpinning ? 'Scanning Area' : 'Serving Region'}
            </p>
         </div>
-        
-        <div className="flex items-end gap-0">
+
+        <div className="flex flex-col gap-1 w-16 md:w-20">
           {targetPostal.code.split('').map((digit, i) => (
             <DigitRoll key={i} digit={digit} isSpinning={isSpinning} />
           ))}
         </div>
-        
-        <p className={`text-[10px] tracking-[0.6em] uppercase transition-all duration-1000 ${isSpinning ? 'opacity-0' : 'opacity-60'}`}>
+
+        <p className={`text-[10px] tracking-[0.6em] uppercase transition-all duration-1000 whitespace-nowrap ${isSpinning ? 'opacity-0' : 'opacity-60'}`}>
           BE / {targetPostal.city}
         </p>
       </div>

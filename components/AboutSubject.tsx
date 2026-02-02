@@ -18,9 +18,9 @@ const AboutSubject: React.FC = () => {
           {/* Silhouette Image */}
           <div className="relative z-10 w-full max-w-md aspect-[3/4] rounded-sm overflow-hidden shadow-2xl group">
              <div className="absolute inset-0 bg-brand-green/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-             <img 
-               src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1000" 
-               alt="Creator Silhouette"
+             <img
+               src="/assets/bts/Subject 3.png"
+               alt="Daan Hannon - Filmmaker"
                className="w-full h-full object-cover filter brightness-90 contrast-125 grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
              />
              <div className="absolute inset-0 border border-brand-cream/10 m-4 pointer-events-none"></div>
@@ -33,8 +33,11 @@ const AboutSubject: React.FC = () => {
             Focus op de <span className="text-brand-green">Essentie.</span>
           </h2>
           <div className="w-20 h-[1px] bg-brand-green mb-10"></div>
+          <p className="text-xl md:text-2xl text-brand-cream/70 font-light leading-relaxed mb-6">
+            Tien jaar heb ik productiehuizen en grote merken gediend—Deloitte, Technopolis, Stad Mechelen. Nu werk ik rechtstreeks met bedrijven die kwaliteit waarderen.
+          </p>
           <p className="text-xl md:text-2xl text-brand-cream/70 font-light leading-relaxed mb-10">
-            Mijn werk is geworteld in authenticiteit. Geen overbodige filters, geen agency-ruis. Ik leg vast wat er écht toe doet: de passie van de vakman, de ziel van het bedrijf.
+            Geen tussenpersonen. Geen agency markup. Gewoon puur vakmanschap: authenticiteit, de passie van de vakman, de ziel van je bedrijf—vastgelegd zoals het hoort.
           </p>
           <div className="space-y-4">
             <div className="flex items-center gap-4 text-xs tracking-[0.3em] uppercase text-brand-green font-bold">
@@ -43,7 +46,7 @@ const AboutSubject: React.FC = () => {
             </div>
             <div className="flex items-center gap-4 text-xs tracking-[0.3em] uppercase text-brand-green font-bold opacity-60">
                <span className="w-6 h-[1px] bg-brand-green opacity-40"></span>
-               Cinematic Draai
+               Cinematic Vakmanschap
             </div>
           </div>
         </div>

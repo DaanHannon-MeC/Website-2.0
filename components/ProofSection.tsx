@@ -40,13 +40,15 @@ const ProofSection: React.FC = () => {
       <div className="relative border-y border-brand-cream/5 py-12">
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-black to-transparent z-10"></div>
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-black to-transparent z-10"></div>
-        
-        <div className="flex whitespace-nowrap animate-ticker">
+
+        <div className="flex whitespace-nowrap animate-ticker items-center">
           {[...BRAND_LOGOS, ...BRAND_LOGOS, ...BRAND_LOGOS].map((logo, i) => (
-            <div key={i} className="inline-block px-12 md:px-24">
-              <span className="text-brand-cream/20 text-lg md:text-2xl font-serif italic tracking-widest uppercase hover:text-brand-green transition-colors cursor-default">
-                {logo}
-              </span>
+            <div key={i} className="inline-block px-12 md:px-16">
+              <img
+                src={logo.image}
+                alt={logo.name}
+                className="h-8 md:h-12 w-auto object-contain filter grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all cursor-default"
+              />
             </div>
           ))}
         </div>
