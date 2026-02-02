@@ -56,14 +56,14 @@ const PortfolioItem: React.FC<{
   return (
     <div
       ref={containerRef}
-      className={`relative group cursor-pointer mb-32 md:mb-0`}
+      className={`relative group cursor-pointer mb-16 md:mb-0`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
       style={getParallaxStyle()}
     >
       <div
-        className={`relative overflow-hidden transition-all duration-700 ease-in-out ${isHovered ? 'scale-105 shadow-2xl' : 'scale-100 shadow-xl'}`}
+        className={`relative overflow-hidden rounded-lg transition-all duration-700 ease-in-out ${isHovered ? 'scale-105 shadow-2xl' : 'scale-100 shadow-xl'}`}
         style={{ aspectRatio: videoAspect }}
       >
         {/* Thumbnail */}
@@ -71,6 +71,7 @@ const PortfolioItem: React.FC<{
           src={project.thumbnail}
           alt={project.title}
           className={`w-full h-full object-cover transition-opacity duration-700 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
+          loading="lazy"
         />
 
         {/* Video overlay */}
@@ -81,14 +82,23 @@ const PortfolioItem: React.FC<{
             muted
             loop
             playsInline
+            preload="metadata"
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Project Info */}
-        <div className="absolute bottom-0 left-0 p-6 z-20 pointer-events-none transition-transform duration-500 group-hover:translate-x-2">
-          <p className="text-[10px] tracking-widest uppercase text-brand-green mb-1 font-bold">{project.category}</p>
-          <h3 className="font-serif text-2xl italic">{project.title}</h3>
+        <div className="absolute bottom-0 left-0 p-4 md:p-6 z-20 pointer-events-none transition-transform duration-500 group-hover:translate-x-2 bg-gradient-to-t from-brand-black/80 via-brand-black/40 to-transparent w-full">
+          <p className="text-[9px] md:text-[10px] tracking-widest uppercase text-brand-green mb-1 font-bold">{project.category}</p>
+          <h3 className="font-serif text-lg md:text-2xl italic">{project.title}</h3>
+
+          {/* Click to play indicator - mobile only */}
+          <div className="md:hidden mt-2 flex items-center gap-2 text-brand-cream/60">
+            <svg viewBox="0 0 24 24" className="w-4 h-4 fill-brand-green" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span className="text-xs">Tik om te bekijken</span>
+          </div>
         </div>
       </div>
     </div>
@@ -123,10 +133,10 @@ const Portfolio: React.FC = () => {
   const depths = [1, 3, 2, 4, 1.5, 2.5];
 
   return (
-    <div className="relative min-h-screen bg-brand-black py-40 overflow-hidden px-8 md:px-20">
-      {/* Custom Mouse Indicator */}
+    <div className="relative min-h-screen bg-brand-black py-20 md:py-40 overflow-hidden px-4 md:px-8 lg:px-20">
+      {/* Custom Mouse Indicator - Hidden on mobile */}
       <div
-        className="custom-cursor flex items-center justify-center pointer-events-none"
+        className="hidden md:flex custom-cursor items-center justify-center pointer-events-none"
         style={{
           transform: `translate3d(${mousePos.x}px, ${mousePos.y}px, 0)`,
           opacity: isHoveringItem ? 1 : 0

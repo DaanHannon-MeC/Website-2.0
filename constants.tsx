@@ -55,13 +55,13 @@ export const PROJECTS: Project[] = [
 export const PROCESS_STEPS: Step[] = [
   {
     number: '01',
-    title: 'De Babbel',
-    description: 'Geen ellenlange vergaderingen. We zitten 30 minuten samen, jij vertelt wat je nodig hebt, wij zeggen hoe we het gaan flikken. Direct en eerlijk.'
+    title: "Zeget'is",
+    description: 'Geen ellenlange vergaderingen. We zitten 30 minuten samen, jij vertelt wat je nodig hebt, wij zeggen hoe we het gaan aanpakken. Direct, eerlijk, op maat van je budget.'
   },
   {
     number: '02',
     title: 'De Draaidag',
-    description: 'We komen langs met een kleine, high-end crew. Geen gedoe met tussenpersonen. Jij behoudt de controle, wij zorgen voor de cinematic magic.'
+    description: 'Ik kom langs met compact, professioneel materiaal. Geen gedoe met tussenpersonen. Jij houdt de controle, ik zorg voor de cinematic magic.'
   },
   {
     number: '03',

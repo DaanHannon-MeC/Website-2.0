@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
           </h1>
           <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 mt-12 animate-fade-in-up">
             <p className="text-lg md:text-xl text-brand-cream/70 max-w-lg font-light leading-relaxed">
-              Premium videoproductie, rechtstreeks beschikbaar. Geen productiehuizen. Geen tussenpersonen. Enkel puur vakmanschap.
+              "Premium videoproductie, rechtstreeks van mij naar jou. Geen productiehuizen, geen tussenpersonen maar samen met mij."
             </p>
             <div className="flex gap-6">
               <a href="#contact" className="group relative flex items-center gap-4 text-sm tracking-widest uppercase font-bold overflow-hidden">

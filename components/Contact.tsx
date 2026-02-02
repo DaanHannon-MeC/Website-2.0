@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
             <span className="text-brand-green italic">volgende stap?</span>
           </h2>
           <p className="text-2xl font-light text-brand-cream/60 leading-relaxed mb-12">
-            Laten we kijken hoe we jouw merk cinematic kunnen maken. Kies een moment dat past in onze agenda voor een vrijblijvend intake gesprek.
+            Laten we samen kijken hoe ik jouw merk cinematic kan maken. Kies een moment dat past in mijn agenda voor een vrijblijvend intake gesprek.
           </p>
 
           <div className="space-y-8">
@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-sm tracking-widest uppercase text-brand-cream/40 font-bold mb-1">Locatie</h4>
-                <p className="text-lg">Centrum Vlaanderen, België</p>
+                <p className="text-lg">Mechelen, België</p>
               </div>
             </div>
 
@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-sm tracking-widest uppercase text-brand-cream/40 font-bold mb-1">E-mail</h4>
-                <p className="text-lg">hello@zegetis.be</p>
+                <p className="text-lg">info@zegetis.be</p>
               </div>
             </div>
           </div>

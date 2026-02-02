@@ -15,7 +15,8 @@ const ProofSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 h-[400px] w-full max-w-6xl mx-auto overflow-hidden">
+        {/* Desktop Gallery */}
+        <div className="hidden md:flex items-center gap-2 h-[400px] w-full max-w-6xl mx-auto overflow-hidden">
           {BTS_PHOTOS.map((photo, idx) => (
             <div
               key={idx}
@@ -25,6 +26,7 @@ const ProofSection: React.FC = () => {
                 className="h-full w-full object-cover object-center filter grayscale group-hover:grayscale-0 transition-all duration-500"
                 src={photo.image}
                 alt={photo.project}
+                loading="lazy"
               />
 
               {/* Project Info Overlay */}
@@ -34,6 +36,35 @@ const ProofSection: React.FC = () => {
                     Behind The Scenes
                   </p>
                   <h3 className="font-serif text-xl md:text-2xl text-brand-cream">
+                    {photo.project}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Gallery - Grid Layout */}
+        <div className="grid grid-cols-2 gap-3 md:hidden max-w-2xl mx-auto">
+          {BTS_PHOTOS.map((photo, idx) => (
+            <div
+              key={idx}
+              className="relative group rounded-lg overflow-hidden aspect-[3/4]"
+            >
+              <img
+                className="h-full w-full object-cover object-center filter grayscale"
+                src={photo.image}
+                alt={photo.project}
+                loading="lazy"
+              />
+
+              {/* Project Info Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent flex items-end p-3">
+                <div>
+                  <p className="text-[8px] tracking-widest uppercase text-brand-green font-bold mb-0.5">
+                    BTS
+                  </p>
+                  <h3 className="font-serif text-xs text-brand-cream">
                     {photo.project}
                   </h3>
                 </div>

@@ -34,10 +34,10 @@ const AboutSubject: React.FC = () => {
           </h2>
           <div className="w-20 h-[1px] bg-brand-green mb-10"></div>
           <p className="text-xl md:text-2xl text-brand-cream/70 font-light leading-relaxed mb-6">
-            Tien jaar heb ik productiehuizen en grote merken gediend—Deloitte, Technopolis, Stad Mechelen. Nu werk ik rechtstreeks met bedrijven die kwaliteit waarderen.
+            Tien jaar heb ik productiehuizen en grote merken gediend—Primus. Lidl. Albert Heijn. Deloitte. Martini. Ikea. Telenet. Maar nu werk ik lokaal, rechtstreeks met bedrijven in de buurt die dezelfde kwaliteit verdienen, zonder de omweg via agencies en productiehuizen.
           </p>
           <p className="text-xl md:text-2xl text-brand-cream/70 font-light leading-relaxed mb-10">
-            Geen tussenpersonen. Geen agency markup. Gewoon puur vakmanschap: authenticiteit, de passie van de vakman, de ziel van je bedrijf—vastgelegd zoals het hoort.
+            Geen tussenpersonen. Geen agency markup. Jij werkt rechtstreeks met mij: de filmmaker die je video's schrijft, filmt én monteert. Van concept tot levering. Authenticiteit, de passie van de vakman, de ziel van je bedrijf. Soms neem ik wel een crew mee maar alleen als dat ECHT nodig is.
           </p>
           <div className="space-y-4">
             <div className="flex items-center gap-4 text-xs tracking-[0.3em] uppercase text-brand-green font-bold">
