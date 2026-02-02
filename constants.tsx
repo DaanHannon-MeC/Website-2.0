@@ -81,8 +81,6 @@ export const BTS_PHOTOS = [
   { image: '/assets/bts/BTS_TEJOCAMPAGNE-3.jpg', project: 'Tejo Campaign' },
   { image: '/assets/bts/Bts STERK 2.jpg', project: 'STERK Project' },
   { image: '/assets/bts/Bts sterk.jpg', project: 'STERK Project' },
-  { image: '/assets/bts/Frame - Portfolio.jpg', project: 'Portfolio Shoot' },
-  { image: '/assets/bts/Subject 3.png', project: 'Studio Session' },
 ];
 
 export const BRAND_LOGOS = [

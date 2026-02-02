@@ -11,7 +11,7 @@ const ProofSection: React.FC = () => {
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold">Behind the <span className="text-brand-green">Lens</span></h2>
           <p className="text-sm text-brand-cream/50 mt-2">
-            A visual collection of our craft – each moment captured with intention and style.
+            Een visuele collectie van ons vakmanschap – elk moment vastgelegd met intentie en stijl.
           </p>
         </div>
 

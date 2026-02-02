@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Fully Vertical Odometer */}
-      <div className="absolute bottom-12 right-8 md:right-12 flex flex-col items-center gap-6 group cursor-default">
+      <div className="hidden md:flex absolute bottom-12 right-8 md:right-12 flex-col items-center gap-6 group cursor-default">
         <div className="flex flex-col items-center gap-3">
            <div className={`w-2 h-2 rounded-full ${isSpinning ? 'bg-brand-green animate-pulse' : 'bg-brand-green shadow-[0_0_10px_rgba(85,139,110,0.8)]'}`}></div>
            <p

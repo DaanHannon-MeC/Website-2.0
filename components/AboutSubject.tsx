@@ -19,9 +19,9 @@ const AboutSubject: React.FC = () => {
           <div className="relative z-10 w-full max-w-md aspect-[3/4] rounded-sm overflow-hidden shadow-2xl group">
              <div className="absolute inset-0 bg-brand-green/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
              <img
-               src="/assets/bts/Subject 3.png"
+               src="/assets/me/Daan.png"
                alt="Daan Hannon - Filmmaker"
-               className="w-full h-full object-cover filter brightness-90 contrast-125 grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+               className="w-full h-full object-contain object-center filter brightness-90 contrast-125 grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
              />
              <div className="absolute inset-0 border border-brand-cream/10 m-4 pointer-events-none"></div>
           </div>

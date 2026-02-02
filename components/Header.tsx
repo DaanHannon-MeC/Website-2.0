@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
         }`}
       >
         <div className="w-full flex justify-between items-center">
-          <a href="/" className="group">
+          <a href="/#hero" className="group">
             <h1 className="font-serif text-2xl md:text-3xl tracking-tighter transition-colors duration-300 group-hover:text-brand-green uppercase font-bold">
               ZEGET'IS
             </h1>
@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
         <div className="h-full flex items-center justify-center">
           <nav className="flex flex-col items-center gap-8">
             <a
-              href="/"
+              href="/#hero"
               onClick={() => setIsMenuOpen(false)}
               className="font-serif text-4xl md:text-5xl hover:text-brand-green transition-colors duration-300"
             >
@@ -56,14 +56,14 @@ const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
               Blog
             </a>
             <a
-              href="#work"
+              href="/#work"
               onClick={() => setIsMenuOpen(false)}
               className="font-serif text-4xl md:text-5xl hover:text-brand-green transition-colors duration-300"
             >
               Portfolio
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsMenuOpen(false)}
               className="font-serif text-4xl md:text-5xl hover:text-brand-green transition-colors duration-300"
             >

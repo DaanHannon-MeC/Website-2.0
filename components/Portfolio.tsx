@@ -1,5 +1,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
+import VideoModal from './VideoModal';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
 
