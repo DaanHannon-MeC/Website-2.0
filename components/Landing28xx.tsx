@@ -18,7 +18,12 @@ const Landing28xx: React.FC = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-8 md:px-12 text-center max-w-4xl">
-          <div className="inline-block bg-brand-green px-6 py-2 rounded-full mb-8 animate-pulse">
+          {/* 2800 Graphic */}
+          <div className="mb-8 flex justify-center">
+            <img src="/assets/2800-graphic.svg" alt="2800" className="w-64 md:w-96 opacity-90" />
+          </div>
+
+          <div className="inline-block bg-brand-green px-6 py-2 rounded-full mb-8">
             <span className="text-brand-black font-bold tracking-widest uppercase text-sm">
               28% Korting voor 28XX Regio
             </span>

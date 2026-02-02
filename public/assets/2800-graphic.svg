@@ -1,0 +1,27 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circles -->
+  <circle cx="50" cy="100" r="80" fill="#558B6E" opacity="0.1"/>
+  <circle cx="350" cy="100" r="80" fill="#558B6E" opacity="0.1"/>
+
+  <!-- Decorative elements -->
+  <path d="M 20 20 Q 200 50 380 20" stroke="#558B6E" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M 20 180 Q 200 150 380 180" stroke="#558B6E" stroke-width="2" fill="none" opacity="0.3"/>
+
+  <!-- Main 2800 text -->
+  <text x="200" y="130" font-family="'Playfair Display', serif" font-size="120" font-weight="700" font-style="italic" text-anchor="middle" fill="#558B6E">
+    2800
+  </text>
+
+  <!-- Accent line under 28 -->
+  <line x1="80" y1="145" x2="220" y2="145" stroke="#558B6E" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Small decorative dots -->
+  <circle cx="40" cy="100" r="4" fill="#558B6E"/>
+  <circle cx="360" cy="100" r="4" fill="#558B6E"/>
+
+  <!-- Corner accents -->
+  <path d="M 10 10 L 30 10 L 30 30" stroke="#FAF0CA" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M 390 10 L 370 10 L 370 30" stroke="#FAF0CA" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M 10 190 L 30 190 L 30 170" stroke="#FAF0CA" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M 390 190 L 370 190 L 370 170" stroke="#FAF0CA" stroke-width="3" fill="none" opacity="0.6"/>
+</svg>
