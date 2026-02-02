@@ -7,6 +7,7 @@ import AboutSubject from './components/AboutSubject';
 import Portfolio from './components/Portfolio';
 import ValueProp from './components/ValueProp';
 import Process from './components/Process';
+import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -54,6 +55,10 @@ const App: React.FC = () => {
 
         <section id="process" className="bg-brand-cream text-brand-black py-40">
           <Process />
+        </section>
+
+        <section id="blog" className="bg-brand-black">
+          <Blog />
         </section>
 
         <section id="contact" className="bg-brand-black py-40">

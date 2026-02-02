@@ -18,13 +18,13 @@ const DigitRoll: React.FC<{ digit: string; isSpinning: boolean }> = ({ digit, is
   }, [isSpinning, digit]);
 
   return (
-    <div className="h-12 md:h-16 overflow-hidden relative w-full">
+    <div className="h-12 md:h-14 overflow-hidden relative w-full">
       <div
-        className="transition-transform duration-1000 cubic-bezier(0.23, 1, 0.32, 1) flex flex-col items-center"
-        style={{ transform: `translateY(-${offset * (window.innerWidth < 768 ? 3 : 4)}rem)` }}
+        className="transition-transform duration-500 ease-out flex flex-col items-center"
+        style={{ transform: `translateY(-${offset * 3}rem)` }}
       >
         {digits.map((d) => (
-          <span key={d} className="h-12 md:h-16 flex items-center justify-center font-serif text-4xl md:text-5xl italic text-brand-green tracking-tighter">
+          <span key={d} className="h-12 md:h-14 flex items-center justify-center font-serif text-3xl md:text-4xl italic text-brand-green tracking-tighter">
             {d}
           </span>
         ))}
@@ -81,7 +81,10 @@ const Hero: React.FC = () => {
           </h2>
           <h1 className="font-serif text-5xl md:text-[7vw] leading-[0.95] tracking-tight mb-8 animate-fade-in-up">
             De kwaliteit van <br />
-            <span className="italic">Grote Merken.</span><br />
+            <span className="italic relative inline-block">
+              <span className="relative z-10">Grote Merken.</span>
+              <span className="absolute inset-0 bg-brand-green/30 -skew-x-12 transform translate-y-2"></span>
+            </span><br />
             Nu voor jouw bedrijf.
           </h1>
           <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 mt-12 animate-fade-in-up">
@@ -102,22 +105,28 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Vertical Odometer */}
-      <div className="absolute bottom-12 right-8 md:right-12 flex flex-row md:flex-col items-center md:items-end gap-4 md:gap-2 group cursor-default">
-        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+      {/* Fully Vertical Odometer */}
+      <div className="absolute bottom-12 right-8 md:right-12 flex flex-col items-center gap-6 group cursor-default">
+        <div className="flex flex-col items-center gap-3">
            <div className={`w-2 h-2 rounded-full ${isSpinning ? 'bg-brand-green animate-pulse' : 'bg-brand-green shadow-[0_0_10px_rgba(85,139,110,0.8)]'}`}></div>
-           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-cream/40 font-bold whitespace-nowrap">
+           <p
+             className="text-[10px] tracking-[0.4em] uppercase text-brand-cream/40 font-bold"
+             style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
+           >
              {isSpinning ? 'Scanning Area' : 'Serving Region'}
            </p>
         </div>
 
-        <div className="flex flex-col gap-1 w-16 md:w-20">
+        <div className="flex flex-col gap-1 w-14 md:w-16">
           {targetPostal.code.split('').map((digit, i) => (
             <DigitRoll key={i} digit={digit} isSpinning={isSpinning} />
           ))}
         </div>
 
-        <p className={`text-[10px] tracking-[0.6em] uppercase transition-all duration-1000 whitespace-nowrap ${isSpinning ? 'opacity-0' : 'opacity-60'}`}>
+        <p
+          className={`text-[10px] tracking-[0.6em] uppercase transition-all duration-1000 ${isSpinning ? 'opacity-0' : 'opacity-60'}`}
+          style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
+        >
           BE / {targetPostal.city}
         </p>
       </div>

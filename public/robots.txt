@@ -1,0 +1,9 @@
+# Allow all bots
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://zegetis.be/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 1

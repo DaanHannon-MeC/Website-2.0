@@ -12,6 +12,19 @@ const PortfolioItem: React.FC<{
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [videoAspect, setVideoAspect] = useState<number>(16 / 9);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const handleLoadedMetadata = () => {
+        const aspect = video.videoWidth / video.videoHeight;
+        setVideoAspect(aspect);
+      };
+      video.addEventListener('loadedmetadata', handleLoadedMetadata);
+      return () => video.removeEventListener('loadedmetadata', handleLoadedMetadata);
+    }
+  }, []);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -47,12 +60,15 @@ const PortfolioItem: React.FC<{
       onMouseLeave={handleMouseLeave}
       style={getParallaxStyle()}
     >
-      <div className={`relative overflow-hidden transition-all duration-700 ease-in-out ${isHovered ? 'scale-105 shadow-2xl' : 'scale-100 shadow-xl'}`}>
+      <div
+        className={`relative overflow-hidden transition-all duration-700 ease-in-out ${isHovered ? 'scale-105 shadow-2xl' : 'scale-100 shadow-xl'}`}
+        style={{ aspectRatio: videoAspect }}
+      >
         {/* Thumbnail */}
-        <img 
-          src={project.thumbnail} 
-          alt={project.title} 
-          className={`w-full aspect-video object-cover transition-opacity duration-700 ${isHovered ? 'opacity-0' : 'opacity-100'}`} 
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          className={`w-full h-full object-cover transition-opacity duration-700 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
         />
 
         {/* Video overlay */}
