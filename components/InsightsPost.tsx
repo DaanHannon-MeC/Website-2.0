@@ -77,6 +77,25 @@ const InsightsPost: React.FC = () => {
     <div className="min-h-screen bg-brand-black">
       <Header isScrolled={true} />
 
+      {/* Mobile-optimized prose styles */}
+      <style>{`
+        .prose h3 { font-size: 1.25rem; line-height: 1.4; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .prose ul, .prose ol { padding-left: 1.25rem; margin-top: 0.75rem; margin-bottom: 0.75rem; }
+        .prose li { margin-top: 0.375rem; margin-bottom: 0.375rem; }
+        .prose p { margin-top: 0.75rem; margin-bottom: 0.75rem; }
+        .prose strong { font-weight: 700; color: #FAF0CA; }
+        @media (min-width: 640px) {
+          .prose h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+          .prose ul, .prose ol { padding-left: 1.5rem; margin-top: 1rem; margin-bottom: 1rem; }
+          .prose li { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+          .prose p { margin-top: 1rem; margin-bottom: 1rem; }
+        }
+        @media (min-width: 768px) {
+          .prose h3 { font-size: 1.875rem; margin-top: 2.5rem; margin-bottom: 1.25rem; }
+          .prose ul, .prose ol { padding-left: 2rem; }
+        }
+      `}</style>
+
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -84,18 +103,18 @@ const InsightsPost: React.FC = () => {
       />
 
       {/* Article Header */}
-      <article className="pt-32 pb-20">
+      <article className="pt-24 md:pt-32 pb-12 md:pb-20">
         {/* Hero Image */}
-        <div className="container mx-auto px-8 md:px-12 mb-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 mb-8 md:mb-12">
           <div className="relative overflow-hidden rounded-sm max-w-6xl mx-auto">
             <img
               src={post.image}
               alt={`${post.title} - ${post.seo.keywords.primary} door Zeget'is videoproductie Mechelen`}
-              className="w-full aspect-[21/9] object-cover filter grayscale"
+              className="w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] object-cover filter grayscale"
               loading="eager"
             />
-            <div className="absolute top-6 left-6 px-6 py-2 bg-brand-green/90 backdrop-blur-sm">
-              <span className="text-xs tracking-widest uppercase font-bold text-brand-black">
+            <div className="absolute top-3 left-3 md:top-6 md:left-6 px-3 py-1.5 md:px-6 md:py-2 bg-brand-green/90 backdrop-blur-sm">
+              <span className="text-[10px] md:text-xs tracking-widest uppercase font-bold text-brand-black">
                 {post.category}
               </span>
             </div>
@@ -103,10 +122,10 @@ const InsightsPost: React.FC = () => {
         </div>
 
         {/* Article Content */}
-        <div className="container mx-auto px-8 md:px-12 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 max-w-4xl">
           {/* Breadcrumbs */}
-          <nav className="mb-8">
-            <ol className="flex items-center gap-2 text-sm text-brand-cream/40">
+          <nav className="mb-6 md:mb-8 overflow-x-auto">
+            <ol className="flex items-center gap-2 text-xs md:text-sm text-brand-cream/40 whitespace-nowrap">
               <li>
                 <Link to="/" className="hover:text-brand-green transition-colors">
                   Home
@@ -119,13 +138,13 @@ const InsightsPost: React.FC = () => {
                 </Link>
               </li>
               <li>/</li>
-              <li className="text-brand-cream/60">{post.title}</li>
+              <li className="text-brand-cream/60 truncate max-w-[150px] sm:max-w-none">{post.title}</li>
             </ol>
           </nav>
 
           {/* Meta Info */}
-          <div className="mb-8">
-            <time className="text-xs tracking-widest uppercase text-brand-cream/40 font-bold block mb-4">
+          <div className="mb-6 md:mb-8">
+            <time className="text-[10px] md:text-xs tracking-widest uppercase text-brand-cream/40 font-bold block mb-4">
               {new Date(post.date).toLocaleDateString('nl-BE', {
                 year: 'numeric',
                 month: 'long',
@@ -135,30 +154,30 @@ const InsightsPost: React.FC = () => {
           </div>
 
           {/* Title */}
-          <h1 className="font-serif text-5xl md:text-7xl italic mb-8 text-brand-cream leading-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl italic mb-6 md:mb-8 text-brand-cream leading-tight">
             {post.title}
           </h1>
 
           {/* Excerpt with decorative element */}
-          <div className="relative mb-16">
-            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-brand-green to-transparent opacity-30"></div>
-            <p className="text-xl md:text-2xl text-brand-cream/70 leading-relaxed font-light italic pl-8 border-l-2 border-brand-green/30">
+          <div className="relative mb-10 md:mb-16">
+            <div className="absolute -left-2 md:-left-4 top-0 w-0.5 md:w-1 h-full bg-gradient-to-b from-brand-green to-transparent opacity-30"></div>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-brand-cream/70 leading-relaxed font-light italic pl-4 sm:pl-6 md:pl-8 border-l-2 border-brand-green/30">
               {post.excerpt}
             </p>
           </div>
 
           {/* Divider with decorative dots */}
-          <div className="flex items-center gap-3 mb-16">
-            <div className="w-2 h-2 bg-brand-green rounded-full"></div>
+          <div className="flex items-center gap-2 md:gap-3 mb-10 md:mb-16">
+            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-brand-green rounded-full"></div>
             <div className="flex-1 h-[1px] bg-brand-green/30"></div>
-            <div className="w-2 h-2 bg-brand-green rounded-full"></div>
+            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-brand-green rounded-full"></div>
           </div>
 
           {/* Article Body with Magazine Layout */}
-          <div className="prose prose-invert prose-lg max-w-none">
+          <div className="prose prose-invert prose-base md:prose-lg max-w-none">
             {/* Intro with drop cap */}
             <div
-              className="text-brand-cream/80 leading-relaxed space-y-6 first-letter:text-7xl first-letter:font-serif first-letter:float-left first-letter:mr-3 first-letter:text-brand-green first-letter:leading-none first-letter:mt-1"
+              className="text-brand-cream/80 leading-relaxed space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg first-letter:text-4xl sm:first-letter:text-5xl md:first-letter:text-7xl first-letter:font-serif first-letter:float-left first-letter:mr-2 md:first-letter:mr-3 first-letter:text-brand-green first-letter:leading-none first-letter:mt-0.5 md:first-letter:mt-1"
               dangerouslySetInnerHTML={{ __html: post.content.intro }}
             />
 
@@ -168,25 +187,25 @@ const InsightsPost: React.FC = () => {
               const isLast = index === post.content.sections.length - 1;
 
               return (
-                <div key={index} className="mt-16 md:mt-24">
+                <div key={index} className="mt-10 md:mt-16 lg:mt-24">
                   {/* Section number */}
-                  <div className="flex items-center gap-6 mb-8">
-                    <span className="text-brand-green/30 font-bold text-sm tracking-widest">
+                  <div className="flex items-center gap-3 md:gap-6 mb-6 md:mb-8">
+                    <span className="text-brand-green/30 font-bold text-xs md:text-sm tracking-widest">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <div className="flex-1 h-[1px] bg-brand-cream/10"></div>
                   </div>
 
                   {/* Alternating layout */}
-                  <div className={`${isEven ? 'md:grid md:grid-cols-12 md:gap-12' : ''}`}>
+                  <div className={`${isEven ? 'md:grid md:grid-cols-12 md:gap-8 lg:gap-12' : ''}`}>
                     {/* Heading */}
                     <div className={isEven ? 'md:col-span-5' : ''}>
-                      <h2 className="font-serif text-3xl md:text-5xl italic mb-6 text-brand-cream leading-tight">
+                      <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl italic mb-4 md:mb-6 text-brand-cream leading-tight">
                         {section.heading}
                       </h2>
                       {isEven && (
                         <div className="hidden md:block mt-8">
-                          <div className="w-12 h-12 border-2 border-brand-green/30 rotate-45"></div>
+                          <div className="w-8 h-8 md:w-12 md:h-12 border-2 border-brand-green/30 rotate-45"></div>
                         </div>
                       )}
                     </div>
@@ -194,15 +213,15 @@ const InsightsPost: React.FC = () => {
                     {/* Content */}
                     <div className={isEven ? 'md:col-span-7' : ''}>
                       <div
-                        className="text-brand-cream/80 leading-relaxed space-y-6 text-lg"
+                        className="text-brand-cream/80 leading-relaxed space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg"
                         dangerouslySetInnerHTML={{ __html: section.content }}
                       />
 
                       {/* Decorative quote line for odd sections */}
                       {!isEven && !isLast && (
-                        <div className="mt-12 flex items-center gap-4">
-                          <div className="w-16 h-[2px] bg-brand-green"></div>
-                          <span className="text-brand-green/60 text-sm italic">•••</span>
+                        <div className="mt-8 md:mt-12 flex items-center gap-3 md:gap-4">
+                          <div className="w-12 md:w-16 h-[2px] bg-brand-green"></div>
+                          <span className="text-brand-green/60 text-xs md:text-sm italic">•••</span>
                         </div>
                       )}
                     </div>
@@ -213,18 +232,18 @@ const InsightsPost: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-20 pt-12 border-t border-brand-cream/10">
-            <div className="bg-brand-green/5 border border-brand-green/20 p-12 rounded-sm">
-              <h3 className="font-serif text-3xl md:text-4xl italic mb-4 text-brand-cream">
+          <div className="mt-12 md:mt-16 lg:mt-20 pt-8 md:pt-12 border-t border-brand-cream/10">
+            <div className="bg-brand-green/5 border border-brand-green/20 p-6 sm:p-8 md:p-12 rounded-sm">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl italic mb-3 md:mb-4 text-brand-cream">
                 Klaar voor je <span className="text-brand-green">verhaal</span>?
               </h3>
-              <p className="text-brand-cream/70 mb-8 leading-relaxed">
+              <p className="text-sm md:text-base text-brand-cream/70 mb-6 md:mb-8 leading-relaxed">
                 Laten we in een 'Zeget'is' call (30 minuten) bespreken wat jouw project nodig heeft.
                 Geen verplichtingen, gewoon eerlijk advies.
               </p>
               <a
                 href="/#contact"
-                className="inline-flex items-center gap-4 px-8 py-4 bg-brand-green text-brand-black font-bold uppercase tracking-widest text-sm hover:bg-brand-green/90 transition-all"
+                className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-8 py-3 md:py-4 bg-brand-green text-brand-black font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-brand-green/90 transition-all"
               >
                 Plan je gesprek
                 <span className="text-xl">→</span>
@@ -233,13 +252,13 @@ const InsightsPost: React.FC = () => {
           </div>
 
           {/* Back to Blog */}
-          <div className="mt-16">
+          <div className="mt-10 md:mt-16">
             <Link
               to="/insights"
-              className="inline-flex items-center gap-3 text-brand-green hover:gap-4 transition-all group"
+              className="inline-flex items-center gap-2 md:gap-3 text-brand-green hover:gap-3 md:hover:gap-4 transition-all group"
             >
-              <span className="text-xl">←</span>
-              <span className="text-sm tracking-widest uppercase font-bold">
+              <span className="text-lg md:text-xl">←</span>
+              <span className="text-xs md:text-sm tracking-widest uppercase font-bold">
                 Terug naar Insights
               </span>
             </Link>
@@ -247,13 +266,13 @@ const InsightsPost: React.FC = () => {
         </div>
 
         {/* Related Posts */}
-        <div className="container mx-auto px-8 md:px-12 mt-32">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 mt-16 md:mt-24 lg:mt-32">
           <div className="max-w-6xl mx-auto">
-            <h3 className="font-serif text-4xl md:text-5xl italic mb-12">
+            <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl italic mb-8 md:mb-12">
               Meer <span className="text-brand-green">Insights</span>
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {insightsPosts
                 .filter(p => p.id !== post.id)
                 .slice(0, 2)
@@ -263,22 +282,22 @@ const InsightsPost: React.FC = () => {
                     to={`/${relatedPost.slug}`}
                     className="group"
                   >
-                    <div className="relative overflow-hidden mb-4 rounded-sm">
+                    <div className="relative overflow-hidden mb-3 md:mb-4 rounded-sm">
                       <img
                         src={relatedPost.image}
                         alt={relatedPost.title}
                         className="w-full aspect-[4/3] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute top-4 left-4 px-4 py-1 bg-brand-green/90 backdrop-blur-sm">
-                        <span className="text-[10px] tracking-widest uppercase font-bold text-brand-black">
+                      <div className="absolute top-3 left-3 md:top-4 md:left-4 px-3 py-1 md:px-4 md:py-1 bg-brand-green/90 backdrop-blur-sm">
+                        <span className="text-[9px] md:text-[10px] tracking-widest uppercase font-bold text-brand-black">
                           {relatedPost.category}
                         </span>
                       </div>
                     </div>
-                    <h4 className="font-serif text-2xl mb-2 group-hover:text-brand-green transition-colors">
+                    <h4 className="font-serif text-xl sm:text-2xl mb-2 group-hover:text-brand-green transition-colors leading-tight">
                       {relatedPost.title}
                     </h4>
-                    <p className="text-brand-cream/60 text-sm">
+                    <p className="text-brand-cream/60 text-xs sm:text-sm line-clamp-2">
                       {relatedPost.excerpt}
                     </p>
                   </Link>
