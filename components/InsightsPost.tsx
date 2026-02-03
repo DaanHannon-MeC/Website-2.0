@@ -75,7 +75,7 @@ const InsightsPost: React.FC = () => {
               <li>/</li>
               <li>
                 <Link to="/insights" className="hover:text-brand-green transition-colors">
-                  Blog
+                  Insights
                 </Link>
               </li>
               <li>/</li>
@@ -99,32 +99,77 @@ const InsightsPost: React.FC = () => {
             {post.title}
           </h1>
 
-          {/* Excerpt */}
-          <p className="text-xl md:text-2xl text-brand-cream/70 leading-relaxed mb-12 font-light">
-            {post.excerpt}
-          </p>
+          {/* Excerpt with decorative element */}
+          <div className="relative mb-16">
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-brand-green to-transparent opacity-30"></div>
+            <p className="text-xl md:text-2xl text-brand-cream/70 leading-relaxed font-light italic pl-8 border-l-2 border-brand-green/30">
+              {post.excerpt}
+            </p>
+          </div>
 
-          {/* Divider */}
-          <div className="w-20 h-[2px] bg-brand-green mb-16"></div>
+          {/* Divider with decorative dots */}
+          <div className="flex items-center gap-3 mb-16">
+            <div className="w-2 h-2 bg-brand-green rounded-full"></div>
+            <div className="flex-1 h-[1px] bg-brand-green/30"></div>
+            <div className="w-2 h-2 bg-brand-green rounded-full"></div>
+          </div>
 
-          {/* Article Body */}
+          {/* Article Body with Magazine Layout */}
           <div className="prose prose-invert prose-lg max-w-none">
+            {/* Intro with drop cap */}
             <div
-              className="text-brand-cream/80 leading-relaxed space-y-6"
+              className="text-brand-cream/80 leading-relaxed space-y-6 first-letter:text-7xl first-letter:font-serif first-letter:float-left first-letter:mr-3 first-letter:text-brand-green first-letter:leading-none first-letter:mt-1"
               dangerouslySetInnerHTML={{ __html: post.content.intro }}
             />
 
-            {post.content.sections.map((section, index) => (
-              <div key={index} className="mt-12">
-                <h2 className="font-serif text-3xl md:text-4xl italic mb-6 text-brand-cream">
-                  {section.heading}
-                </h2>
-                <div
-                  className="text-brand-cream/80 leading-relaxed space-y-6"
-                  dangerouslySetInnerHTML={{ __html: section.content }}
-                />
-              </div>
-            ))}
+            {/* Sections with alternating layouts */}
+            {post.content.sections.map((section, index) => {
+              const isEven = index % 2 === 0;
+              const isLast = index === post.content.sections.length - 1;
+
+              return (
+                <div key={index} className="mt-16 md:mt-24">
+                  {/* Section number */}
+                  <div className="flex items-center gap-6 mb-8">
+                    <span className="text-brand-green/30 font-bold text-sm tracking-widest">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <div className="flex-1 h-[1px] bg-brand-cream/10"></div>
+                  </div>
+
+                  {/* Alternating layout */}
+                  <div className={`${isEven ? 'md:grid md:grid-cols-12 md:gap-12' : ''}`}>
+                    {/* Heading */}
+                    <div className={isEven ? 'md:col-span-5' : ''}>
+                      <h2 className="font-serif text-3xl md:text-5xl italic mb-6 text-brand-cream leading-tight">
+                        {section.heading}
+                      </h2>
+                      {isEven && (
+                        <div className="hidden md:block mt-8">
+                          <div className="w-12 h-12 border-2 border-brand-green/30 rotate-45"></div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Content */}
+                    <div className={isEven ? 'md:col-span-7' : ''}>
+                      <div
+                        className="text-brand-cream/80 leading-relaxed space-y-6 text-lg"
+                        dangerouslySetInnerHTML={{ __html: section.content }}
+                      />
+
+                      {/* Decorative quote line for odd sections */}
+                      {!isEven && !isLast && (
+                        <div className="mt-12 flex items-center gap-4">
+                          <div className="w-16 h-[2px] bg-brand-green"></div>
+                          <span className="text-brand-green/60 text-sm italic">•••</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* CTA Section */}
@@ -155,7 +200,7 @@ const InsightsPost: React.FC = () => {
             >
               <span className="text-xl">←</span>
               <span className="text-sm tracking-widest uppercase font-bold">
-                Terug naar Blog
+                Terug naar Insights
               </span>
             </Link>
           </div>
@@ -175,7 +220,7 @@ const InsightsPost: React.FC = () => {
                 .map(relatedPost => (
                   <Link
                     key={relatedPost.id}
-                    to={`/insights/${relatedPost.slug}`}
+                    to={`/${relatedPost.slug}`}
                     className="group"
                   >
                     <div className="relative overflow-hidden mb-4 rounded-sm">
