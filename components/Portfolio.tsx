@@ -185,7 +185,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Item 4 - Albert Heijn */}
-        <div className="md:col-span-6 md:col-start-7">
+        <div className="md:col-span-6 md:col-start-7 md:-translate-y-12">
           <PortfolioItem
             project={PROJECTS[3]}
             depth={depths[3]}

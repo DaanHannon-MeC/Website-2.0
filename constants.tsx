@@ -20,18 +20,18 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: 'NIO Documentary',
-    category: 'Documentary',
-    thumbnail: '/assets/thumbnails/Thumb Nio.png',
-    videoUrl: '/assets/videos/NIO Documentary.mp4',
-    aspectRatio: 'wide'
-  },
-  {
-    id: '4',
     title: 'Albert Heijn Nieuwjaarsduik',
     category: 'Event Recap',
     thumbnail: '/assets/thumbnails/Thumb Albert Heijn.png',
     videoUrl: '/assets/videos/AH_NIEUWJAARSDUIK_Social media Content.mp4',
+    aspectRatio: 'wide'
+  },
+  {
+    id: '4',
+    title: 'NIO Documentary',
+    category: 'Documentary',
+    thumbnail: '/assets/thumbnails/Thumb Nio.png',
+    videoUrl: '/assets/videos/NIO Documentary.mp4',
     aspectRatio: 'wide'
   },
   {

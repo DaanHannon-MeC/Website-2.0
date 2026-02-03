@@ -1,9 +1,29 @@
-# Allow all bots
+# Zeget'is Website - Robots.txt
+# Updated: 2026-02-03
+
+# Allow all crawlers
 User-agent: *
 Allow: /
+
+# Disallow admin/private areas (if any in future)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all blog content
+Allow: /blog/
+Allow: /blog/*
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://zegetis.be/sitemap.xml
 
-# Crawl-delay for all bots
-Crawl-delay: 1
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0

@@ -1,33 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './components/Header';
-import Blog from './components/Blog';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+import BlogListing from './components/BlogListing';
+import BlogPost from './components/BlogPost';
+import CookieBanner from './components/CookieBanner';
 
-const BlogPage: React.FC = () => {
-  const [isScrolled, setIsScrolled] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+const BlogApp: React.FC = () => {
   return (
-    <div className="min-h-screen font-sans bg-brand-black">
-      <Header isScrolled={isScrolled} />
-      <main className="pt-32">
-        <Blog />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter basename="/blog">
+      <Routes>
+        <Route path="/" element={<BlogListing />} />
+        <Route path="/:slug" element={<BlogPost />} />
+      </Routes>
+      <CookieBanner />
+      <Analytics />
+    </BrowserRouter>
   );
 };
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BlogPage />
+    <BlogApp />
   </React.StrictMode>
 );
