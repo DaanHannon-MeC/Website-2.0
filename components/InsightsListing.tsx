@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { blogPosts } from '../data/blogPosts';
+import { insightsPosts } from '../data/insightsPosts';
 import Header from './Header';
 import Footer from './Footer';
 
-const BlogListing: React.FC = () => {
+const InsightsListing: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Alle');
 
   // Get unique categories
-  const categories = ['Alle', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  const categories = ['Alle', ...Array.from(new Set(insightsPosts.map(post => post.category)))];
 
   // Filter posts by category
   const filteredPosts = selectedCategory === 'Alle'
-    ? blogPosts
-    : blogPosts.filter(post => post.category === selectedCategory);
+    ? insightsPosts
+    : insightsPosts.filter(post => post.category === selectedCategory);
 
   // Get featured post (most recent)
   const featuredPost = filteredPosts[0];
@@ -212,4 +212,4 @@ const BlogListing: React.FC = () => {
   );
 };
 
-export default BlogListing;
+export default InsightsListing;

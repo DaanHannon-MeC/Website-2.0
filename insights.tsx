@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
-import BlogListing from './components/BlogListing';
-import BlogPost from './components/BlogPost';
+import InsightsListing from './components/InsightsListing';
+import InsightsPost from './components/InsightsPost';
 import CookieBanner from './components/CookieBanner';
 
-const BlogApp: React.FC = () => {
+const InsightsApp: React.FC = () => {
   return (
-    <BrowserRouter basename="/blog">
+    <BrowserRouter basename="/insights">
       <Routes>
-        <Route path="/" element={<BlogListing />} />
-        <Route path="/:slug" element={<BlogPost />} />
+        <Route path="/" element={<InsightsListing />} />
+        <Route path="/:slug" element={<InsightsPost />} />
       </Routes>
       <CookieBanner />
       <Analytics />
@@ -21,6 +21,6 @@ const BlogApp: React.FC = () => {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BlogApp />
+    <InsightsApp />
   </React.StrictMode>
 );

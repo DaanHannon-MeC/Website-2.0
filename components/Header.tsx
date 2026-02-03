@@ -49,11 +49,11 @@ const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
               Home
             </a>
             <a
-              href="/blog"
+              href="/insights"
               onClick={() => setIsMenuOpen(false)}
               className="font-serif text-4xl md:text-5xl hover:text-brand-green transition-colors duration-300"
             >
-              Blog
+              Insights
             </a>
             <a
               href="/#work"

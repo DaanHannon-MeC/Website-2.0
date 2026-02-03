@@ -2,7 +2,7 @@ import { post1Content } from './blog-content/post1';
 import { post2Content } from './blog-content/post2';
 import { post3Content } from './blog-content/post3';
 
-export interface BlogPost {
+export interface InsightsPost {
   id: string;
   slug: string;
   title: string;
@@ -33,7 +33,7 @@ export interface BlogPost {
   };
 }
 
-export const blogPosts: BlogPost[] = [
+export const insightsPosts: InsightsPost[] = [
   {
     id: '1',
     slug: 'bedrijfsvideo-mechelen-kosten-prijzen-2026',

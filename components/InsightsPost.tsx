@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { blogPosts } from '../data/blogPosts';
+import { insightsPosts } from '../data/insightsPosts';
 import Header from './Header';
 import Footer from './Footer';
 
-const BlogPost: React.FC = () => {
+const InsightsPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const post = blogPosts.find(p => p.slug === slug);
+  const post = insightsPosts.find(p => p.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to="/insights" replace />;
   }
 
   // Add structured data
@@ -74,7 +74,7 @@ const BlogPost: React.FC = () => {
               </li>
               <li>/</li>
               <li>
-                <Link to="/blog" className="hover:text-brand-green transition-colors">
+                <Link to="/insights" className="hover:text-brand-green transition-colors">
                   Blog
                 </Link>
               </li>
@@ -150,7 +150,7 @@ const BlogPost: React.FC = () => {
           {/* Back to Blog */}
           <div className="mt-16">
             <Link
-              to="/blog"
+              to="/insights"
               className="inline-flex items-center gap-3 text-brand-green hover:gap-4 transition-all group"
             >
               <span className="text-xl">←</span>
@@ -175,7 +175,7 @@ const BlogPost: React.FC = () => {
                 .map(relatedPost => (
                   <Link
                     key={relatedPost.id}
-                    to={`/blog/${relatedPost.slug}`}
+                    to={`/insights/${relatedPost.slug}`}
                     className="group"
                   >
                     <div className="relative overflow-hidden mb-4 rounded-sm">
@@ -208,4 +208,4 @@ const BlogPost: React.FC = () => {
   );
 };
 
-export default BlogPost;
+export default InsightsPost;
