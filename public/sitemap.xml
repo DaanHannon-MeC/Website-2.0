@@ -1,68 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zegetis.be/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- 28XX Landing Page -->
   <url>
-    <loc>https://zegetis.be/28xx.html</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Blog Listing Page -->
-  <url>
-    <loc>https://zegetis.be/blog</loc>
+    <loc>https://zegetis.be/insights</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Blog Post 1: Bedrijfsvideo Mechelen Kosten -->
   <url>
-    <loc>https://zegetis.be/blog/bedrijfsvideo-mechelen-kosten-prijzen-2026</loc>
+    <loc>https://zegetis.be/insights/bedrijfsvideo-mechelen-kosten-prijzen-2026</loc>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://zegetis.be/Assets/bts/Bts.jpg</image:loc>
-      <image:title>Bedrijfsvideo Mechelen: Kosten &amp; Prijzen 2026</image:title>
-    </image:image>
   </url>
-
-  <!-- Blog Post 2: Productfotografie + Video -->
   <url>
-    <loc>https://zegetis.be/blog/productfotografie-video-een-dag-besparing</loc>
+    <loc>https://zegetis.be/insights/productfotografie-video-een-dag-besparing</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://zegetis.be/Assets/bts/bts 1.jpg</image:loc>
-      <image:title>Productfotografie + Video in Één Dag</image:title>
-    </image:image>
   </url>
-
-  <!-- Blog Post 3: Videograaf Kiezen -->
   <url>
-    <loc>https://zegetis.be/blog/videograaf-kiezen-7-essentiële-vragen</loc>
+    <loc>https://zegetis.be/insights/videograaf-kiezen-7-essentiële-vragen</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://zegetis.be/Assets/bts/bts 2.jpg</image:loc>
-      <image:title>Videograaf Kiezen? 7 Vragen Die Niemand Vertelt</image:title>
-    </image:image>
   </url>
-
+  <url>
+    <loc>https://zegetis.be/28xx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
