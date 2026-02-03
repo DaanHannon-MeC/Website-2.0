@@ -151,8 +151,8 @@ const Portfolio: React.FC = () => {
       </div>
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-        {/* Item 1 */}
-        <div className="md:col-span-6 md:translate-y-12">
+        {/* Item 1 - Agentschap (Larger, top) */}
+        <div className="md:col-span-7">
           <PortfolioItem
             project={PROJECTS[0]}
             depth={depths[0]}
@@ -162,8 +162,8 @@ const Portfolio: React.FC = () => {
           />
         </div>
 
-        {/* Item 2 */}
-        <div className="md:col-span-5 md:col-start-8">
+        {/* Item 2 - Thuis */}
+        <div className="md:col-span-5">
           <PortfolioItem
             project={PROJECTS[1]}
             depth={depths[1]}
@@ -173,8 +173,8 @@ const Portfolio: React.FC = () => {
           />
         </div>
 
-        {/* Item 3 */}
-        <div className="md:col-span-4 md:translate-x-12">
+        {/* Item 3 - NIO */}
+        <div className="md:col-span-5 md:translate-y-12">
           <PortfolioItem
             project={PROJECTS[2]}
             depth={depths[2]}
@@ -184,8 +184,8 @@ const Portfolio: React.FC = () => {
           />
         </div>
 
-        {/* Item 4 */}
-        <div className="md:col-span-7 md:translate-y-24">
+        {/* Item 4 - Albert Heijn */}
+        <div className="md:col-span-6 md:col-start-7">
           <PortfolioItem
             project={PROJECTS[3]}
             depth={depths[3]}
@@ -195,8 +195,8 @@ const Portfolio: React.FC = () => {
           />
         </div>
 
-        {/* Item 5 */}
-        <div className="md:col-span-5">
+        {/* Item 5 - Stad Mechelen */}
+        <div className="md:col-span-6 md:-translate-y-24">
           <PortfolioItem
             project={PROJECTS[4]}
             depth={depths[4]}
@@ -206,8 +206,8 @@ const Portfolio: React.FC = () => {
           />
         </div>
 
-        {/* Item 6 */}
-        <div className="md:col-span-4 md:col-start-8 md:-translate-y-32">
+        {/* Item 6 - Impact */}
+        <div className="md:col-span-5 md:col-start-8 md:-translate-y-32">
           <PortfolioItem
             project={PROJECTS[5]}
             depth={depths[5]}

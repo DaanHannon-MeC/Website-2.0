@@ -4,22 +4,6 @@ import { Project, Step } from './types';
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'NIO Documentary',
-    category: 'Documentary',
-    thumbnail: '/assets/thumbnails/Thumb Nio.png',
-    videoUrl: '/assets/videos/NIO Documentary.mp4',
-    aspectRatio: 'wide'
-  },
-  {
-    id: '2',
-    title: 'Stad Mechelen Campagne',
-    category: 'Commercial Campaign',
-    thumbnail: '/assets/thumbnails/Thumb Mechelen.png',
-    videoUrl: '/assets/videos/Stad Mechelen Campagne.mp4',
-    aspectRatio: 'wide'
-  },
-  {
-    id: '3',
     title: 'Agentschap Inburgering & Integratie',
     category: 'Commercial Campaign',
     thumbnail: '/assets/thumbnails/Thumb Agentschap inburgering.png',
@@ -27,27 +11,43 @@ export const PROJECTS: Project[] = [
     aspectRatio: 'wide'
   },
   {
+    id: '2',
+    title: 'Thuis',
+    category: 'Social Content',
+    thumbnail: '/assets/thumbnails/Thumb Thuis.png',
+    videoUrl: '/assets/videos/Thuis - Social Content.mp4',
+    aspectRatio: 'wide'
+  },
+  {
+    id: '3',
+    title: 'NIO Documentary',
+    category: 'Documentary',
+    thumbnail: '/assets/thumbnails/Thumb Nio.png',
+    videoUrl: '/assets/videos/NIO Documentary.mp4',
+    aspectRatio: 'wide'
+  },
+  {
     id: '4',
     title: 'Albert Heijn Nieuwjaarsduik',
-    category: 'Social Media Content',
+    category: 'Event Recap',
     thumbnail: '/assets/thumbnails/Thumb Albert Heijn.png',
     videoUrl: '/assets/videos/AH_NIEUWJAARSDUIK_Social media Content.mp4',
     aspectRatio: 'wide'
   },
   {
     id: '5',
-    title: 'IMPACT',
-    category: 'Commercial',
-    thumbnail: '/assets/thumbnails/Thumb Impact.png',
-    videoUrl: '/assets/videos/IMPACT - Commercial.mp4',
+    title: 'Stad Mechelen Campagne',
+    category: 'Commercial Campaign',
+    thumbnail: '/assets/thumbnails/Thumb Mechelen.png',
+    videoUrl: '/assets/videos/Stad Mechelen Campagne.mp4',
     aspectRatio: 'wide'
   },
   {
     id: '6',
-    title: 'Thuis',
-    category: 'Social Content',
-    thumbnail: '/assets/thumbnails/Thumb Thuis.png',
-    videoUrl: '/assets/videos/Thuis - Social Content.mp4',
+    title: 'IMPACT',
+    category: 'Commercial',
+    thumbnail: '/assets/thumbnails/Thumb Impact.png',
+    videoUrl: '/assets/videos/IMPACT - Commercial.mp4',
     aspectRatio: 'wide'
   }
 ];

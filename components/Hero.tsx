@@ -97,11 +97,11 @@ const Hero: React.FC = () => {
           <h2 className="font-serif text-xs md:text-sm tracking-[0.4em] uppercase mb-8 animate-fade-in-up text-brand-green font-bold">
             A Creative Studio based in Vlaanderen
           </h2>
-          <h1 className="font-serif text-5xl md:text-[7vw] leading-[0.95] tracking-tight mb-8 animate-fade-in-up">
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] tracking-tight mb-8 animate-fade-in-up">
             De kwaliteit van <br />
-            <span className="italic relative inline-block">
+            <span className="italic relative inline-block whitespace-nowrap">
               <span className="relative z-10">Grote Merken.</span>
-              <span className="absolute inset-0 bg-brand-green/30 -skew-x-12 transform translate-y-2"></span>
+              <span className="absolute inset-0 bg-brand-green/30 -skew-x-12 transform translate-y-1"></span>
             </span><br />
             Nu voor jouw bedrijf.
           </h1>

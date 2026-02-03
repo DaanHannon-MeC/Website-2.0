@@ -7,6 +7,16 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+
+      // Set default consent mode for EER users
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
       gtag('js', new Date());
       gtag('config', 'G-JH9JGB3CVQ');
     </script>
@@ -41,7 +51,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -56,7 +66,7 @@
             },
             fontFamily: {
               serif: ['Playfair Display', 'serif'],
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Montserrat', 'sans-serif'],
             },
             animation: {
               'pulse-down': 'pulse-down 2s ease-in-out infinite',
