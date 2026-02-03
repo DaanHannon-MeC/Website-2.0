@@ -1,5 +1,5 @@
 export const post2Content = {
-  intro: `<p>Je hebt productfoto's nodig. En video's. Dus je boekt een fotograaf. Dan een videograaf. Twee shoots, twee dagen, dubbele kosten. Dit scenario speel zich elke week af bij bedrijven in de 28XX regio.</p>
+  intro: `<p>Je hebt productfoto's nodig. En video's. Dus je boekt een fotograaf. Dan een videograaf. Twee shoots, twee dagen, dubbele kosten. Dit scenario speel zich elke week af bij bedrijven in Mechelen en omgeving.</p>
 
 <p>Maar waarom eigenlijk?</p>
 
@@ -160,7 +160,7 @@ export const post2Content = {
 
 <p>Als je belt en beschrijft wat je nodig hebt, zeg ik direct of combineren zinvol is. Niet alles hoeft in één dag. Maar als het kan? Je bespaart geld én krijgt beter resultaat. Dus waarom niet?</p>
 
-<p>Ik push geen gecombineerde shoots als het niet past. Maar negen van de tien keer—vooral bij bedrijven in de 28XX regio waar locatie en beschikbaarheid important factors zijn—is bundelen de slimmere move.</p>`
+<p>Ik push geen gecombineerde shoots als het niet past. Maar negen van de tien keer—vooral bij bedrijven in Mechelen waar locatie en beschikbaarheid important factors zijn—is bundelen de slimmere move.</p>`
     },
     {
       heading: "Consistency Factor: Waarom Het Verschil Maakt",

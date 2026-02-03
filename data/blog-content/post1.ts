@@ -3,7 +3,7 @@ export const post1Content = {
 
 <p>Geen wonder dat je in de war bent.</p>
 
-<p>Ik ben Daan, filmmaker uit de 28XX. Ik heb gefilmd voor Deloitte, Lidl, NIO, Stad Mechelen. Ik ken de prijzen van de grote agencies én ik ken de solo-tarieven. Ik weet wat je betaalt bij beide. En waarom.</p>
+<p>Ik ben Daan, filmmaker uit Mechelen. Ik heb gefilmd voor Deloitte, Lidl, NIO, Stad Mechelen. Ik ken de prijzen van de grote agencies én ik ken de solo-tarieven. Ik weet wat je betaalt bij beide. En waarom.</p>
 
 <p>Dit artikel legt uit wat een <strong>bedrijfsvideo in Mechelen</strong> kost in 2026, waarom de prijzen zo verschillen, en wanneer je te veel betaalt. Transparant. Zonder bullshit.</p>`,
 
@@ -29,7 +29,7 @@ export const post1Content = {
     },
     {
       heading: "Marktprijzen België: Wat Anderen Vragen",
-      content: `<p>Laat me de markt opsplitsen. Dit zijn de gemiddelde prijzen voor <strong>videoproductie in Mechelen</strong> en omgeving (28XX postcodes) in 2026:</p>
+      content: `<p>Laat me de markt opsplitsen. Dit zijn de gemiddelde prijzen voor <strong>videoproductie in Mechelen</strong> en omgeving (postcode 2800) in 2026:</p>
 
 <h3>Solo Videografen: €500 - €2.500</h3>
 <p>Vaak beginners of part-timers. Eén persoon, compacte setup. Edit is basic. Levering duurt vaak 3-6 weken. Goedkoop, maar kwaliteit varieert enorm. Geen verzekering, geen backup plan als het misgaat.</p>
@@ -94,7 +94,7 @@ export const post1Content = {
 <p><em>Wil je weten wat voor jouw project? Vul het 5-vragen formulier in. Je krijgt binnen 24u een eerlijk antwoord.</em></p>`
     },
     {
-      heading: "Case: Lokaal Bedrijf uit de 28XX",
+      heading: "Case: Lokaal Bedrijf uit Mechelen",
       content: `<p>Voorbeeld uit de praktijk. Lokale producent in Willebroek (2830) wilde een bedrijfsvideo. Ze hadden quotes van €2.800, €6.500 en €12.000 gekregen voor hetzelfde concept.</p>
 
 <p><strong>Hun vraag:</strong> "Waarom zo'n verschil?"</p>

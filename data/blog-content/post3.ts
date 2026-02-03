@@ -5,7 +5,7 @@ export const post3Content = {
 
 <p>Niks over of ze deadlines halen. Niks over wie de video's edit. Niks over wat gebeurt als de eerste cut niet goed is. Niks over het proces, alleen het resultaat.</p>
 
-<p>Na 10 jaar filmen—van agency werk voor Deloitte tot solo productie voor lokale bedrijven in de 28XX—heb ik geleerd: de beste videografen zijn niet per se degenen met de mooiste reels. Het zijn degenen die het proces snappen en transparant zijn over hoe ze werken.</p>
+<p>Na 10 jaar filmen—van agency werk voor Deloitte tot solo productie voor lokale bedrijven in Mechelen—heb ik geleerd: de beste videografen zijn niet per se degenen met de mooiste reels. Het zijn degenen die het proces snappen en transparant zijn over hoe ze werken.</p>
 
 <p>Dit zijn de 7 vragen die niemand je vertelt te stellen. Maar die alles onthullen over of een videograaf professioneel is of niet. Geen technische jargon. Gewoon: "Hoe werk je?"</p>`,
 
@@ -255,7 +255,7 @@ export const post3Content = {
 
 <p>Dit zijn geen vragen om moeilijk te doen. Dit zijn vragen om transparantie te krijgen over hoe iemand werkt. Omdat filmen niet alleen "mooie beelden maken" is—het is proces, communicatie en verwachtingen managen.</p>
 
-<p>Als je een videograaf zoekt in Mechelen of 28XX, stel deze vragen. Aan mij, of aan iemand anders. En let op de antwoorden. Vaagheid = red flag. Details = professioneel.</p>
+<p>Als je een videograaf zoekt in Mechelen, stel deze vragen. Aan mij, of aan iemand anders. En let op de antwoorden. Vaagheid = red flag. Details = professioneel.</p>
 
 <p><strong>→ Klaar voor eerlijke antwoorden?</strong> Start een Zeget'is call. 30 minuten. Ik beantwoord alle 7 vragen (en meer) voor je project specifiek. Geen sales pitch, gewoon transparantie over of ik de juiste fit ben of niet.</p>
 
