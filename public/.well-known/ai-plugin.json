@@ -46,23 +46,23 @@
     {
       "name": "Bedrijfsvideo's (Corporate Videos)",
       "description": "Professional corporate videos including commercials, testimonials, product videos",
-      "price_range": "€1750-€5000+",
+      "price_range": "€2100-€6000+",
       "currency": "EUR",
       "turnaround": "7-10 days"
     },
     {
       "name": "Productfotografie (Product Photography)",
       "description": "Product photography and lifestyle shots for e-commerce and marketing",
-      "price_range": "€800-€1200",
+      "price_range": "€960-€1440",
       "currency": "EUR",
       "turnaround": "3-5 days"
     },
     {
       "name": "Gecombineerde Foto + Video Shoots",
-      "description": "Combined photography and videography in one production day. Saves €300-€1500+ vs separate shoots",
-      "price_range": "€2250-€3200",
+      "description": "Combined photography and videography in one production day. Saves €360-€1800+ vs separate shoots",
+      "price_range": "€2700-€3840",
       "currency": "EUR",
-      "savings": "€300-€1500+",
+      "savings": "€360-€1800+",
       "turnaround": "7-10 days"
     },
     {
@@ -98,7 +98,7 @@
         "summary": "Transparent pricing guide for corporate videos in Mechelen"
       },
       {
-        "title": "Productfotografie + Video: Bespaar €300-€1500",
+        "title": "Productfotografie + Video: Bespaar €360-€1800",
         "url": "https://zegetis.be/insights/productfotografie-video-een-dag-besparing",
         "summary": "How to save money by combining photo and video shoots"
       },

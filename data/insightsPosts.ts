@@ -38,8 +38,8 @@ export const insightsPosts: InsightsPost[] = [
     id: '1',
     slug: 'bedrijfsvideo-mechelen-kosten-prijzen-2026',
     title: 'Bedrijfsvideo Mechelen: Kosten & Prijzen 2026',
-    excerpt: 'Wat kost een bedrijfsvideo in Mechelen echt? Transparante prijzen van €1.750 tot €5.000+. Geen agency markup, direct met de filmmaker.',
-    metaDescription: 'Wat kost een bedrijfsvideo in Mechelen? Transparante prijzen €1.750-€5.000+. Geen agency markup. Direct met filmmaker.',
+    excerpt: 'Wat kost een bedrijfsvideo in Mechelen echt? Transparante prijzen van €2.100 tot €6.000+. Geen agency markup, direct met de filmmaker.',
+    metaDescription: 'Wat kost een bedrijfsvideo in Mechelen? Transparante prijzen €2.100-€6.000+. Geen agency markup. Direct met filmmaker.',
     date: '2026-01-15',
     image: '/assets/insights/bedrijfsvideo-mechelen-kosten-prijzen-filmmaker.jpg',
     category: 'Prijzen & Kosten',
@@ -51,7 +51,7 @@ export const insightsPosts: InsightsPost[] = [
       },
       schema: {
         headline: 'Bedrijfsvideo Mechelen: Kosten & Prijzen 2026',
-        description: 'Wat kost een bedrijfsvideo in Mechelen? Transparante prijzen €1.750-€5.000+. Geen agency markup. Direct met filmmaker.',
+        description: 'Wat kost een bedrijfsvideo in Mechelen? Transparante prijzen €2.100-€6.000+. Geen agency markup. Direct met filmmaker.',
         datePublished: '2026-01-15',
         author: 'Daan Hannon',
         publisher: "Zeget'is"
@@ -61,7 +61,7 @@ export const insightsPosts: InsightsPost[] = [
   {
     id: '2',
     slug: 'productfotografie-video-een-dag-besparing',
-    title: 'Productfotografie + Video in Één Dag | Bespaar €3.000+',
+    title: 'Productfotografie + Video in Één Dag | Bespaar €3.600+',
     excerpt: 'Waarom twee shoots boeken en betalen? Combineer productfotografie en video in één dag. Efficiënter, goedkoper en consistenter voor je brand.',
     metaDescription: 'Waarom twee shoots? Foto\'s én video in één productie. Efficiënter, goedkoper, consistenter.',
     date: '2026-01-08',
@@ -74,7 +74,7 @@ export const insightsPosts: InsightsPost[] = [
         secondary: ['bedrijfsfotografie Mechelen', 'visual content package']
       },
       schema: {
-        headline: 'Productfotografie + Video in Één Dag | Bespaar €3.000+',
+        headline: 'Productfotografie + Video in Één Dag | Bespaar €3.600+',
         description: 'Waarom twee shoots? Foto\'s én video in één productie. Efficiënter, goedkoper, consistenter.',
         datePublished: '2026-01-08',
         author: 'Daan Hannon',

@@ -40,7 +40,7 @@ export const post2Content = {
 
 <p><strong>Totaal:</strong> Minimaal 24-32 uur werk, verdeeld over twee dagen + twee locatiebezoeken.</p>
 
-<p>En de kosten? Gemiddeld €800-€1.200 voor productfotografie + €1.750-€3.500 voor video. Je kijkt naar €2.550-€4.700 totaal.</p>
+<p>En de kosten? Gemiddeld €960-€1.440 voor productfotografie + €2.100-€4.200 voor video. Je kijkt naar €3.060-€5.640 totaal.</p>
 
 <h3>Breakdown Gecombineerde Shoot (1 Dag)</h3>
 
@@ -58,9 +58,9 @@ export const post2Content = {
 
 <p><strong>Totaal:</strong> 17-22 uur werk, één dag, één locatiebezoek.</p>
 
-<p>Prijs bij Zeget'is: €2.250-€3.200 afhankelijk van complexiteit en aantal deliverables.</p>
+<p>Prijs bij Zeget'is: €2.700-€3.840 afhankelijk van complexiteit en aantal deliverables.</p>
 
-<p><strong>Besparing: €300-€1.500+</strong> ten opzichte van aparte shoots. En dat is alleen de directe kosten—nog los van jouw tijd (twee keer briefen, twee keer beschikbaar zijn op locatie, twee keer feedback geven).</p>`
+<p><strong>Besparing: €360-€1.800+</strong> ten opzichte van aparte shoots. En dat is alleen de directe kosten—nog los van jouw tijd (twee keer briefen, twee keer beschikbaar zijn op locatie, twee keer feedback geven).</p>`
     },
     {
       heading: "Zeget'is Workflow Breakdown: Hoe Het Werkt",

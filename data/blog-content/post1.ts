@@ -1,5 +1,5 @@
 export const post1Content = {
-  intro: `<p>Je wil een bedrijfsvideo. Je googlet "bedrijfsvideo Mechelen". Je ziet portfolio's vol cinematic shots, maar nergens staat wat het kost. Dan krijg je quotes die variëren van €1.500 tot €15.000 voor wat lijkt op hetzelfde.</p>
+  intro: `<p>Je wil een bedrijfsvideo. Je googlet "bedrijfsvideo Mechelen". Je ziet portfolio's vol cinematic shots, maar nergens staat wat het kost. Dan krijg je quotes die variëren van €1.800 tot €18.000 voor wat lijkt op hetzelfde.</p>
 
 <p>Geen wonder dat je in de war bent.</p>
 
@@ -31,27 +31,27 @@ export const post1Content = {
       heading: "Marktprijzen België: Wat Anderen Vragen",
       content: `<p>Laat me de markt opsplitsen. Dit zijn de gemiddelde prijzen voor <strong>videoproductie in Mechelen</strong> en omgeving (postcode 2800) in 2026:</p>
 
-<h3>Solo Videografen: €500 - €2.500</h3>
+<h3>Solo Videografen: €600 - €3.000</h3>
 <p>Vaak beginners of part-timers. Eén persoon, compacte setup. Edit is basic. Levering duurt vaak 3-6 weken. Goedkoop, maar kwaliteit varieert enorm. Geen verzekering, geen backup plan als het misgaat.</p>
 
-<h3>Gevestigde Freelancers: €1.750 - €5.000</h3>
+<h3>Gevestigde Freelancers: €2.100 - €6.000</h3>
 <p>Professionele solo filmmaker of klein team. Agency-niveau kwaliteit zonder markup. Snelle levering (1-2 weken). Volledige pre-productie, goede communicatie, verzekerd. Dit is waar Zeget'is zit.</p>
 
-<h3>Kleine Productiebedrijven: €5.000 - €10.000</h3>
+<h3>Kleine Productiebedrijven: €6.000 - €12.000</h3>
 <p>Team van 2-4 mensen. Office overhead. Meerdere lagen communicatie. Goede kwaliteit maar je betaalt voor hun bedrijfskosten.</p>
 
-<h3>Full-Service Agencies: €10.000 - €50.000+</h3>
+<h3>Full-Service Agencies: €12.000 - €60.000+</h3>
 <p>Voor grote campagnes met strategie, scripting teams, acteurs, meerdere draaidagen. Je betaalt voor projectmanagers, account managers, creatieve directors die niet op set staan maar wel gefactureerd worden.</p>
 
-<p><strong>Reality check:</strong> 80% van de lokale bedrijven in Mechelen hebben geen €10k+ video nodig. Ze hebben een sterke, eerlijke brand video nodig die hun verhaal vertelt. Die kost tussen €2.000 en €4.000.</p>
+<p><strong>Reality check:</strong> 80% van de lokale bedrijven in Mechelen hebben geen €12k+ video nodig. Ze hebben een sterke, eerlijke brand video nodig die hun verhaal vertelt. Die kost tussen €2.400 en €4.800.</p>
 
-<p>Ik ben de filmmaker die op agency sets stond. Ik weet wat je krijgt voor €15.000. En ik weet dat je 70% daarvan niet nodig hebt.</p>`
+<p>Ik ben de filmmaker die op agency sets stond. Ik weet wat je krijgt voor €18.000. En ik weet dat je 70% daarvan niet nodig hebt.</p>`
     },
     {
       heading: "Zeget'is Transparante Prijzen",
       content: `<p>Ik hou niet van verborgen kosten. Hier is wat je betaalt bij Zeget'is voor een <strong>bedrijfsvideo in Mechelen</strong> in 2026:</p>
 
-<h3>Half-Day Package: €1.750</h3>
+<h3>Half-Day Package: €2.100</h3>
 <p><strong>Wat je krijgt:</strong></p>
 <ul>
 <li>4 uur filming (voormiddag of namiddag)</li>
@@ -63,7 +63,7 @@ export const post1Content = {
 </ul>
 <p><strong>Goed voor:</strong> Team intro's, product showcases, testimonials.</p>
 
-<h3>Full-Day Production: €3.500</h3>
+<h3>Full-Day Production: €4.200</h3>
 <p><strong>Wat je krijgt:</strong></p>
 <ul>
 <li>8 uur filming (volledige dag)</li>
@@ -75,7 +75,7 @@ export const post1Content = {
 </ul>
 <p><strong>Goed voor:</strong> Company overviews, recruitment videos, event recaps.</p>
 
-<h3>Premium Package: €5.000+</h3>
+<h3>Premium Package: €6.000+</h3>
 <p><strong>Wat je krijgt:</strong></p>
 <ul>
 <li>Meerdere draaidagen</li>
@@ -95,7 +95,7 @@ export const post1Content = {
     },
     {
       heading: "Case: Lokaal Bedrijf uit Mechelen",
-      content: `<p>Voorbeeld uit de praktijk. Lokale producent in Willebroek (2830) wilde een bedrijfsvideo. Ze hadden quotes van €2.800, €6.500 en €12.000 gekregen voor hetzelfde concept.</p>
+      content: `<p>Voorbeeld uit de praktijk. Lokale producent in Willebroek (2830) wilde een bedrijfsvideo. Ze hadden quotes van €3.400, €7.800 en €14.400 gekregen voor hetzelfde concept.</p>
 
 <p><strong>Hun vraag:</strong> "Waarom zo'n verschil?"</p>
 
@@ -113,14 +113,14 @@ export const post1Content = {
 <li>Drone footage van hun site</li>
 <li>1 hoofdvideo (2:15) + 3 social cuts (Instagram, LinkedIn formats)</li>
 <li>Professionele color grading die hun industrial look cinematic maakte</li>
-<li><strong>Totaal: €4.200</strong></li>
+<li><strong>Totaal: €5.000</strong></li>
 </ul>
 
 <p><strong>Hun ROI:</strong> 40% meer quote requests in de 3 maanden na lancering. Ze gebruiken de social cuts nog steeds in hun recruitment.</p>
 
-<p>De €12.000 quote kwam van een Brusselse agency. Zelfde output. Maar je betaalde voor hun kantoor in het centrum, hun account manager, hun creative director die nooit op set kwam.</p>
+<p>De €14.400 quote kwam van een Brusselse agency. Zelfde output. Maar je betaalde voor hun kantoor in het centrum, hun account manager, hun creative director die nooit op set kwam.</p>
 
-<p>De €2.800 quote? Solo beginner zonder verzekering, geen backup gear, 6 weken levertijd.</p>
+<p>De €3.400 quote? Solo beginner zonder verzekering, geen backup gear, 6 weken levertijd.</p>
 
 <p><strong>Zeget'is zit ertussen:</strong> professionele kwaliteit, snelle levering, zonder onnodige kosten.</p>`
     },
@@ -130,12 +130,12 @@ export const post1Content = {
 
 <p><strong>Wat een agency factureert:</strong></p>
 <ul>
-<li>Creative director (3u briefing): €450</li>
-<li>Projectmanager (5u coördinatie): €625</li>
-<li>Filmmaker (8u shoot): €800</li>
-<li>Editor (12u post): €900</li>
-<li>Account manager (overhead): €400</li>
-<li>Office + admin (15%): €500</li>
+<li>Creative director (3u briefing): €540</li>
+<li>Projectmanager (5u coördinatie): €750</li>
+<li>Filmmaker (8u shoot): €960</li>
+<li>Editor (12u post): €1.080</li>
+<li>Account manager (overhead): €480</li>
+<li>Office + admin (15%): €600</li>
 <li><strong>Totaal: €3.675 + BTW = €4.450</strong></li>
 </ul>
 
