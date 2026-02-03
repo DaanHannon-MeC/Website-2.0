@@ -20,18 +20,18 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: 'NIO Documentary',
-    category: 'Documentary',
-    thumbnail: '/assets/thumbnails/Thumb Nio.png',
-    videoUrl: '/assets/videos/NIO Documentary.mp4',
-    aspectRatio: 'wide'
-  },
-  {
-    id: '4',
     title: 'Albert Heijn Nieuwjaarsduik',
     category: 'Event Recap',
     thumbnail: '/assets/thumbnails/Thumb Albert Heijn.png',
     videoUrl: '/assets/videos/AH_NIEUWJAARSDUIK_Social media Content.mp4',
+    aspectRatio: 'wide'
+  },
+  {
+    id: '4',
+    title: 'NIO Documentary',
+    category: 'Documentary',
+    thumbnail: '/assets/thumbnails/Thumb Nio.png',
+    videoUrl: '/assets/videos/NIO Documentary.mp4',
     aspectRatio: 'wide'
   },
   {
@@ -86,11 +86,11 @@ export const BTS_PHOTOS = [
 export const BRAND_LOGOS = [
   { name: 'NIO', image: '/assets/logos/NIO_logo.svg.png', className: '' },
   { name: 'Albert Heijn', image: '/assets/logos/Albert_Heijn_Logo.svg.png', className: '' },
-  { name: 'Stad Mechelen', image: '/assets/logos/mechelen.png', className: 'h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all mix-blend-multiply' },
-  { name: 'Agentschap Inburgering', image: '/assets/logos/Agentschap inburgering.jpeg', className: 'h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all mix-blend-multiply' },
-  { name: 'KU Leuven', image: '/assets/logos/KU-Leuven-logo.png', className: 'h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all mix-blend-multiply' },
+  { name: 'Stad Mechelen', image: '/assets/logos/mechelen.png', className: 'h-8 md:h-12 w-auto object-contain filter brightness-0 invert opacity-60 hover:opacity-100 hover:brightness-100 hover:invert-0 transition-all' },
+  { name: 'Agentschap Inburgering', image: '/assets/logos/Agentschap inburgering.jpeg', className: 'h-8 md:h-12 w-auto object-contain filter brightness-0 invert opacity-60 hover:opacity-100 hover:brightness-100 hover:invert-0 transition-all' },
+  { name: 'KU Leuven', image: '/assets/logos/KU-Leuven-logo.png', className: '' },
   { name: 'Thuis', image: '/assets/logos/ThuisLogo2025.png', className: '' },
-  { name: 'ELGi', image: '/assets/logos/ELGi_Equipments_Logo_(2020).png', className: 'h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all mix-blend-multiply' },
+  { name: 'ELGi', image: '/assets/logos/ELGi_Equipments_Logo_(2020).png', className: '' },
 ];
 
 export const POSTAL_DATA = [

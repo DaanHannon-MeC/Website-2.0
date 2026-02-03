@@ -173,7 +173,7 @@ const Portfolio: React.FC = () => {
           />
         </div>
 
-        {/* Item 3 - NIO */}
+        {/* Item 3 - Albert Heijn */}
         <div className="md:col-span-5 md:translate-y-12">
           <PortfolioItem
             project={PROJECTS[2]}
@@ -184,8 +184,8 @@ const Portfolio: React.FC = () => {
           />
         </div>
 
-        {/* Item 4 - Albert Heijn */}
-        <div className="md:col-span-6 md:col-start-7 md:-translate-y-12">
+        {/* Item 4 - NIO */}
+        <div className="md:col-span-6 md:col-start-7 md:translate-y-4">
           <PortfolioItem
             project={PROJECTS[3]}
             depth={depths[3]}
