@@ -169,7 +169,7 @@ const InsightsPost: React.FC = () => {
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {blogPosts
+              {insightsPosts
                 .filter(p => p.id !== post.id)
                 .slice(0, 2)
                 .map(relatedPost => (
