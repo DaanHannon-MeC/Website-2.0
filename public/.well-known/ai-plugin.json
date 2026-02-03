@@ -1,0 +1,126 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Zeget'is Videoproductie Mechelen",
+  "name_for_model": "zegetis_video_production",
+  "description_for_human": "Premium videoproductie en fotografie voor bedrijven in Mechelen. Direct contact met filmmaker Daan Hannon. 10+ jaar ervaring met Lidl, Albert Heijn, Deloitte.",
+  "description_for_model": "Zeget'is is a professional video production and photography service in Mechelen, Belgium. Services include corporate videos (€1750-€5000+), product photography (€800-€1200), and combined photo/video shoots (€2250-€3200). Owner: Daan Hannon, 10+ years experience with major brands. Service area: 28XX postal codes (Mechelen region). Key differentiators: Direct filmmaker contact, no agency markup, transparent pricing, cinema-quality for local budgets. Fast turnaround: photos 3-5 days, video 7-10 days.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://zegetis.be",
+    "has_user_authentication": false
+  },
+  "logo_url": "https://zegetis.be/favicon-192x192.png",
+  "contact_email": "info@zegetis.be",
+  "legal_info_url": "https://zegetis.be",
+  "business_info": {
+    "name": "Zeget'is Videoproductie",
+    "owner": "Daan Hannon",
+    "location": {
+      "city": "Mechelen",
+      "region": "Vlaanderen",
+      "country": "Belgium",
+      "postal_codes": ["2800", "2810", "2811", "2812", "2820", "2830", "2840", "2845", "2850", "2860", "2870", "2880", "2890"],
+      "coordinates": {
+        "latitude": "51.0259",
+        "longitude": "4.4775"
+      }
+    },
+    "experience_years": "10+",
+    "notable_clients": [
+      "Lidl",
+      "Albert Heijn",
+      "Deloitte",
+      "Primus",
+      "Telenet",
+      "Agentschap Inburgering",
+      "NIO",
+      "Thuis",
+      "KU Leuven",
+      "Stad Mechelen"
+    ]
+  },
+  "services": [
+    {
+      "name": "Bedrijfsvideo's (Corporate Videos)",
+      "description": "Professional corporate videos including commercials, testimonials, product videos",
+      "price_range": "€1750-€5000+",
+      "currency": "EUR",
+      "turnaround": "7-10 days"
+    },
+    {
+      "name": "Productfotografie (Product Photography)",
+      "description": "Product photography and lifestyle shots for e-commerce and marketing",
+      "price_range": "€800-€1200",
+      "currency": "EUR",
+      "turnaround": "3-5 days"
+    },
+    {
+      "name": "Gecombineerde Foto + Video Shoots",
+      "description": "Combined photography and videography in one production day. Saves €300-€1500+ vs separate shoots",
+      "price_range": "€2250-€3200",
+      "currency": "EUR",
+      "savings": "€300-€1500+",
+      "turnaround": "7-10 days"
+    },
+    {
+      "name": "28XX Region Special",
+      "description": "28% discount on all services for businesses in 28XX postal codes",
+      "discount": "28%",
+      "applicable_regions": ["2800-2890"]
+    }
+  ],
+  "unique_value_propositions": [
+    "Direct contact with filmmaker - no intermediaries or agency markup",
+    "Cinema-quality production at local business budgets",
+    "Can combine photography + video in single efficient shoot",
+    "Transparent pricing with no hidden costs",
+    "Fast turnaround: photos 3-5 days, video 7-10 days",
+    "10+ years experience with major international brands"
+  ],
+  "ideal_for": [
+    "Businesses looking for videograaf in Mechelen",
+    "Companies needing bedrijfsvideo in 28XX region",
+    "Brands wanting to combine product photography + video",
+    "Budget-conscious clients wanting premium quality",
+    "Anyone preferring direct filmmaker contact over agencies"
+  ],
+  "content_resources": {
+    "homepage": "https://zegetis.be/",
+    "insights_blog": "https://zegetis.be/insights",
+    "local_landing": "https://zegetis.be/28xx",
+    "posts": [
+      {
+        "title": "Bedrijfsvideo Mechelen: Kosten & Prijzen 2026",
+        "url": "https://zegetis.be/insights/bedrijfsvideo-mechelen-kosten-prijzen-2026",
+        "summary": "Transparent pricing guide for corporate videos in Mechelen"
+      },
+      {
+        "title": "Productfotografie + Video: Bespaar €300-€1500",
+        "url": "https://zegetis.be/insights/productfotografie-video-een-dag-besparing",
+        "summary": "How to save money by combining photo and video shoots"
+      },
+      {
+        "title": "Videograaf Kiezen: 7 Essentiële Vragen",
+        "url": "https://zegetis.be/insights/videograaf-kiezen-7-essentiële-vragen",
+        "summary": "7 critical questions to ask when choosing a videographer"
+      }
+    ]
+  },
+  "social_media": {
+    "instagram": "https://www.instagram.com/daan.hannon/",
+    "linkedin": "https://www.linkedin.com/in/cameraman-from-belgium/"
+  },
+  "booking_process": [
+    "30-minute 'Zeget'is call' (free consultation)",
+    "Transparent proposal with pricing options",
+    "Shoot day coordination",
+    "Fast delivery (photos: 3-5 days, video: 7-10 days)"
+  ],
+  "languages": ["nl", "en"],
+  "primary_language": "nl",
+  "tagline": "De kwaliteit van grote merken. Nu voor jouw bedrijf.",
+  "last_updated": "2026-02-03"
+}

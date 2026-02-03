@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH9JGB3CVQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Set default consent mode for EER users
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'G-JH9JGB3CVQ');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -10,8 +29,154 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
 
-    <title>28% Korting voor 28XX Regio - ZEGET'IS</title>
-    <meta name="description" content="Exclusieve 28% korting op premium videoproductie voor bedrijven in de 28XX regio. Direct, zonder tussenpersonen." />
+    <title>28% Korting voor 28XX Regio | Videograaf Mechelen | ZEGET'IS</title>
+    <meta name="description" content="Exclusieve 28% korting op premium videoproductie voor bedrijven in de 28XX regio (Mechelen, Willebroek, Boom, Puurs-Sint-Amands). Daan Hannon - 10+ jaar ervaring. Bedrijfsvideo's vanaf €1260 (normaal €1750)." />
+    <meta name="keywords" content="videograaf Mechelen, 28XX korting, videoproductie Mechelen, bedrijfsvideo 2800, Willebroek videograaf, Boom videoproductie, Puurs videograaf" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="geo.region" content="BE-VLG" />
+    <meta name="geo.placename" content="Mechelen" />
+    <meta name="geo.position" content="51.0259;4.4775" />
+    <link rel="canonical" href="https://zegetis.be/28xx" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zegetis.be/28xx" />
+    <meta property="og:title" content="28% Korting voor 28XX Regio | ZEGET'IS" />
+    <meta property="og:description" content="Exclusieve 28% korting op premium videoproductie voor bedrijven in de 28XX regio." />
+    <meta property="og:locale" content="nl_BE" />
+
+    <!-- JSON-LD for Local Special Offer -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SpecialAnnouncement",
+      "name": "28% Korting voor 28XX Regio",
+      "text": "Exclusieve 28% korting op alle videoproductie services voor bedrijven in de Mechelen regio (postcodes 2800-2890). Direct contact met filmmaker zonder agency markup.",
+      "url": "https://zegetis.be/28xx",
+      "datePosted": "2026-02-03",
+      "expires": "2026-12-31",
+      "category": "https://www.wikidata.org/wiki/Q620967",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "28XX Regio - Mechelen en omstreken",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mechelen",
+          "postalCode": "2800",
+          "addressRegion": "Vlaanderen",
+          "addressCountry": "BE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "51.0259",
+          "longitude": "4.4775"
+        }
+      },
+      "organizer": {
+        "@type": "LocalBusiness",
+        "name": "Zeget'is Videoproductie",
+        "url": "https://zegetis.be",
+        "telephone": "+32-XXX-XXX-XXX",
+        "email": "info@zegetis.be"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD for Offer with Geographic Restriction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Offer",
+      "name": "28% Korting Bedrijfsvideo Mechelen (28XX)",
+      "description": "Professionele bedrijfsvideo's met 28% korting voor lokale bedrijven in postcodes 2800-2890. Inclusief pre-productie, filming en post-productie.",
+      "url": "https://zegetis.be/28xx",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "1260",
+        "priceCurrency": "EUR",
+        "minPrice": "1260",
+        "maxPrice": "3600",
+        "valueAddedTaxIncluded": "false"
+      },
+      "discount": "28%",
+      "eligibleRegion": {
+        "@type": "GeoShape",
+        "name": "28XX Postcodes - Mechelen Regio",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mechelen, Willebroek, Boom, Puurs-Sint-Amands, Bornem, Sint-Katelijne-Waver, Duffel",
+          "postalCode": "2800, 2810, 2811, 2812, 2820, 2830, 2840, 2845, 2850, 2860, 2870, 2880, 2890",
+          "addressRegion": "Vlaanderen",
+          "addressCountry": "BE"
+        }
+      },
+      "seller": {
+        "@type": "LocalBusiness",
+        "name": "Zeget'is Videoproductie",
+        "description": "Daan Hannon - Filmmaker met 10+ jaar ervaring (Lidl, Albert Heijn, Deloitte)",
+        "url": "https://zegetis.be"
+      },
+      "validFrom": "2026-02-03",
+      "validThrough": "2026-12-31"
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zegetis.be/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "28XX Korting",
+          "item": "https://zegetis.be/28xx"
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema for 28XX Region Questions -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welke postcodes komen in aanmerking voor 28% korting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alle postcodes in de 28XX regio: 2800 (Mechelen), 2810 (Willebroek), 2811, 2812, 2820 (Bonheiden), 2830 (Willebroek), 2840 (Rumst), 2845 (Niel), 2850 (Boom), 2860 (Sint-Katelijne-Waver), 2870 (Puurs-Sint-Amands), 2880 (Bornem), 2890 (Sint-Amands)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoeveel bespaar ik met 28% korting op een bedrijfsvideo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Met 28% korting betaal je €1.260 in plaats van €1.750 voor een standaard bedrijfsvideo (besparing: €490). Voor uitgebreidere projecten van €5.000 bespaar je €1.400 en betaal je €3.600."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Waarom krijgt de 28XX regio korting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Als lokale videograaf in Mechelen wil ik de lokale economie ondersteunen. Bedrijven in mijn thuisregio (28XX) krijgen daarom 28% korting - geen reiskosten, snellere service en directe lokale samenwerking."
+          }
+        }
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

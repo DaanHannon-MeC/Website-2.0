@@ -25,7 +25,8 @@ const ProofSection: React.FC = () => {
               <img
                 className="h-full w-full object-cover object-center filter grayscale group-hover:grayscale-0 transition-all duration-500"
                 src={photo.image}
-                alt={photo.project}
+                alt={`Behind the scenes ${photo.project} videoproductie door Zeget'is videograaf Daan Hannon in Mechelen - Professionele filmmaking set`}
+                title={`${photo.project} - Behind the Scenes fotografie`}
                 loading="lazy"
               />
 
@@ -52,7 +53,7 @@ const ProofSection: React.FC = () => {
             <div className="grid grid-cols-3 gap-2">
               {BTS_PHOTOS.slice(0, 3).map((photo, idx) => (
                 <div key={idx} className="relative rounded-lg overflow-hidden aspect-square">
-                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={photo.project} loading="lazy" />
+                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={`Behind the scenes ${photo.project} videoproductie door Zeget'is videograaf Mechelen`} title={`${photo.project} - BTS fotografie`} loading="lazy" />
                 </div>
               ))}
             </div>
@@ -72,7 +73,7 @@ const ProofSection: React.FC = () => {
             <div className="grid grid-cols-3 gap-2">
               {BTS_PHOTOS.slice(4, 7).map((photo, idx) => (
                 <div key={idx} className="relative rounded-lg overflow-hidden aspect-square">
-                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={photo.project} loading="lazy" />
+                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={`Behind the scenes ${photo.project} videoproductie door Zeget'is videograaf Mechelen`} title={`${photo.project} - BTS fotografie`} loading="lazy" />
                 </div>
               ))}
             </div>
@@ -92,7 +93,7 @@ const ProofSection: React.FC = () => {
             <div className="grid grid-cols-2 gap-2">
               {BTS_PHOTOS.slice(8, 10).map((photo, idx) => (
                 <div key={idx} className="relative rounded-lg overflow-hidden aspect-square">
-                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={photo.project} loading="lazy" />
+                  <img className="h-full w-full object-cover object-center filter grayscale" src={photo.image} alt={`Behind the scenes ${photo.project} videoproductie door Zeget'is videograaf Mechelen`} title={`${photo.project} - BTS fotografie`} loading="lazy" />
                 </div>
               ))}
             </div>

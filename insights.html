@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH9JGB3CVQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Set default consent mode for EER users
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'G-JH9JGB3CVQ');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -33,6 +52,88 @@
     <meta property="twitter:title" content="Insights - Stories & Tips | Zeget'is Videoproductie" />
     <meta property="twitter:description" content="Eerlijke verhalen over videoproductie, transparante prijzen en praktische tips." />
     <meta property="twitter:image" content="https://zegetis.be/Assets/bts/Bts.jpg" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="geo.region" content="BE-VLG" />
+    <meta name="geo.placename" content="Mechelen" />
+    <meta name="geo.position" content="51.0259;4.4775" />
+
+    <!-- JSON-LD Structured Data for AI Crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Zeget'is Insights - Videoproductie & Fotografie Blog",
+      "description": "Eerlijke verhalen over videoproductie, transparante prijzen en praktische tips van filmmaker Daan Hannon. Geen corporate bullshit, gewoon straight talk met 10+ jaar ervaring.",
+      "url": "https://zegetis.be/insights",
+      "inLanguage": "nl-BE",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zeget'is Videoproductie",
+        "url": "https://zegetis.be",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://zegetis.be/favicon-192x192.png"
+        }
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Daan Hannon",
+        "jobTitle": "Filmmaker & Videographer",
+        "description": "10+ jaar ervaring met grote merken zoals Lidl, Albert Heijn, Deloitte. Gespecialiseerd in bedrijfsvideo's en productfotografie voor lokale bedrijven in Mechelen.",
+        "url": "https://zegetis.be"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Bedrijfsvideo Mechelen: Kosten & Prijzen 2026",
+          "url": "https://zegetis.be/insights/bedrijfsvideo-mechelen-kosten-prijzen-2026",
+          "datePublished": "2026-01-15",
+          "description": "Transparante prijzen voor bedrijfsvideo's in Mechelen. Van €1750 tot €5000+ - alles wat je moet weten.",
+          "keywords": "bedrijfsvideo kosten, videoproductie prijzen, Mechelen"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Productfotografie + Video: Bespaar €300-€1500 met Gecombineerde Shoots",
+          "url": "https://zegetis.be/insights/productfotografie-video-een-dag-besparing",
+          "datePublished": "2026-01-08",
+          "description": "Combineer productfotografie en video in één dag. Bespaar kosten én krijg consistente content.",
+          "keywords": "productfotografie, productvideo, gecombineerde shoot"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Videograaf Kiezen: 7 Essentiële Vragen",
+          "url": "https://zegetis.be/insights/videograaf-kiezen-7-essentiële-vragen",
+          "datePublished": "2025-12-28",
+          "description": "De 7 vragen die je moet stellen voordat je een videograaf inhuurt. Red flag checklist included.",
+          "keywords": "videograaf kiezen, filmmaker selecteren, bedrijfsvideo"
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zegetis.be/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://zegetis.be/insights"
+        }
+      ]
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />

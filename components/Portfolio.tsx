@@ -69,7 +69,8 @@ const PortfolioItem: React.FC<{
         {/* Thumbnail */}
         <img
           src={project.thumbnail}
-          alt={project.title}
+          alt={`${project.title} - ${project.category} videoproductie door Zeget'is Mechelen | Professionele filmmaker Daan Hannon`}
+          title={`Bekijk ${project.title} - ${project.category} portfolio video`}
           className={`w-full h-full object-cover transition-opacity duration-700 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
           loading="lazy"
         />

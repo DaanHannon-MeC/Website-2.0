@@ -46,7 +46,8 @@ const Logos3 = ({
                 <div className="mx-4 md:mx-10 flex shrink-0 items-center justify-center">
                   <img
                     src={logo.image}
-                    alt={logo.description}
+                    alt={`${logo.description} - Client logo, professionele videoproductie door Zeget'is videograaf Mechelen`}
+                    title={`${logo.description} - Zeget'is portfolio client`}
                     className={logo.className || "h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"}
                   />
                 </div>

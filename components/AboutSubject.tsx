@@ -20,7 +20,8 @@ const AboutSubject: React.FC = () => {
              <div className="absolute inset-0 bg-brand-green/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
              <img
                src="/assets/me/Daan.png"
-               alt="Daan Hannon - Filmmaker"
+               alt="Daan Hannon - Professionele videograaf en filmmaker Mechelen met 10+ jaar ervaring voor Lidl, Albert Heijn, Deloitte | Zeget'is videoproductie"
+               title="Daan Hannon - Filmmaker & Videograaf Mechelen"
                className="w-full h-full object-contain object-center filter brightness-90 contrast-125 grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
              />
              <div className="absolute inset-0 border border-brand-cream/10 m-4 pointer-events-none"></div>
