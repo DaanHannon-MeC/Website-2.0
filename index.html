@@ -2,6 +2,15 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH9JGB3CVQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JH9JGB3CVQ');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -48,6 +57,9 @@
             fontFamily: {
               serif: ['Playfair Display', 'serif'],
               sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'pulse-down': 'pulse-down 2s ease-in-out infinite',
             }
           }
         }
@@ -85,6 +97,15 @@
       }
       .animate-fade-in-up {
         animation: fade-in-up 0.8s ease-out forwards;
+      }
+
+      @keyframes pulse-down {
+        0% { top: 0; opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { top: 100%; opacity: 0; }
+      }
+      .animate-pulse-down {
+        animation: pulse-down 2s ease-in-out infinite;
       }
     </style>
   <script type="importmap">

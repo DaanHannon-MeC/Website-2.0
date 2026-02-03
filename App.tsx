@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProofSection from './components/ProofSection';
@@ -9,6 +10,7 @@ import ValueProp from './components/ValueProp';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 
 const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,6 +64,8 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
+      <CookieBanner />
+      <Analytics />
     </div>
   );
 };

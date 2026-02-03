@@ -42,11 +42,29 @@ const Hero: React.FC = () => {
       try {
         const response = await fetch('https://ipapi.co/json/');
         const data = await response.json();
-        if (data.postal && data.postal.startsWith('28')) {
-          const match = POSTAL_DATA.find(p => p.code === data.postal);
-          setTargetPostal(match || { code: data.postal, city: data.city || 'Regio' });
+
+        // Check if postal code exists and is in Belgium
+        if (data.postal && data.country_code === 'BE') {
+          // Ensure postal code is 4 digits by padding with zeros if needed
+          let postalCode = data.postal.replace(/\D/g, ''); // Remove non-digits
+          if (postalCode.length < 4) {
+            postalCode = postalCode.padStart(4, '0');
+          }
+
+          // Check if it's in the 28xx range
+          if (postalCode.startsWith('28')) {
+            const match = POSTAL_DATA.find(p => p.code === postalCode);
+            if (match) {
+              setTargetPostal(match);
+            } else {
+              // Use the postal code even if not in our list
+              setTargetPostal({ code: postalCode, city: data.city || 'Regio' });
+            }
+          }
         }
-      } catch (e) {}
+      } catch (e) {
+        console.log('Location detection failed, using default');
+      }
     };
 
     detectLocation();
@@ -105,9 +123,9 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Fully Vertical Odometer */}
-      <div className="hidden md:flex absolute bottom-12 right-8 md:right-12 flex-col items-center gap-6 group cursor-default">
-        <div className="flex flex-col items-center gap-3">
+      {/* Fully Vertical Odometer with Connector Line */}
+      <div className="hidden md:flex absolute bottom-0 right-8 md:right-12 flex-col items-center gap-6 group cursor-default">
+        <div className="flex flex-col items-center gap-3 mb-6">
            <div className={`w-2 h-2 rounded-full ${isSpinning ? 'bg-brand-green animate-pulse' : 'bg-brand-green shadow-[0_0_10px_rgba(85,139,110,0.8)]'}`}></div>
            <p
              className="text-[10px] tracking-[0.4em] uppercase text-brand-cream/40 font-bold"
@@ -124,11 +142,17 @@ const Hero: React.FC = () => {
         </div>
 
         <p
-          className={`text-[10px] tracking-[0.6em] uppercase transition-all duration-1000 ${isSpinning ? 'opacity-0' : 'opacity-60'}`}
+          className={`text-[10px] tracking-[0.6em] uppercase transition-all duration-1000 ${isSpinning ? 'opacity-0' : 'opacity-60'} mb-6`}
           style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
         >
           BE / {targetPostal.city}
         </p>
+
+        {/* Vertical connector line extending down */}
+        <div className="relative w-[1px] h-32 bg-gradient-to-b from-brand-green via-brand-green/50 to-transparent">
+          {/* Animated pulse dot moving down */}
+          <div className="absolute top-0 w-1 h-1 bg-brand-green rounded-full animate-pulse-down"></div>
+        </div>
       </div>
     </div>
   );
