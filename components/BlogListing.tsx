@@ -59,7 +59,7 @@ const BlogListing: React.FC = () => {
           {/* Featured Post - Full Width Hero */}
           {featuredPost && (
             <Link
-              to={`/blog/${featuredPost.slug}`}
+              to={`/${featuredPost.slug}`}
               className="block mb-20 group"
             >
               <div className="relative overflow-hidden rounded-sm">
@@ -127,7 +127,7 @@ const BlogListing: React.FC = () => {
                     key={post.id}
                     className={`group ${gridClass}`}
                   >
-                    <Link to={`/blog/${post.slug}`}>
+                    <Link to={`/${post.slug}`}>
                       <div className="relative overflow-hidden mb-6 rounded-sm">
                         <img
                           src={post.image}
