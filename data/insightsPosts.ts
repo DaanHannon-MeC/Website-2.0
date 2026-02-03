@@ -41,7 +41,7 @@ export const insightsPosts: InsightsPost[] = [
     excerpt: 'Wat kost een bedrijfsvideo in Mechelen echt? Transparante prijzen van €1.750 tot €5.000+. Geen agency markup, direct met de filmmaker.',
     metaDescription: 'Wat kost een bedrijfsvideo in Mechelen? Transparante prijzen €1.750-€5.000+. Geen agency markup. Direct met filmmaker.',
     date: '2026-01-15',
-    image: '/Assets/Marketing material/Assets/AGII - DAAN BTS-16.jpg',
+    image: '/assets/insights/post1-hero.jpg',
     category: 'Prijzen & Kosten',
     content: post1Content,
     seo: {
@@ -65,7 +65,7 @@ export const insightsPosts: InsightsPost[] = [
     excerpt: 'Waarom twee shoots boeken en betalen? Combineer productfotografie en video in één dag. Efficiënter, goedkoper en consistenter voor je brand.',
     metaDescription: 'Waarom twee shoots? Foto\'s én video in één productie. Efficiënter, goedkoper, consistenter.',
     date: '2026-01-08',
-    image: '/Assets/Marketing material/Assets/AGII - DAAN BTS-7.jpg',
+    image: '/assets/insights/post2-hero.jpg',
     category: 'Strategie & Efficiëntie',
     content: post2Content,
     seo: {
@@ -89,7 +89,7 @@ export const insightsPosts: InsightsPost[] = [
     excerpt: 'Iedereen toont showreels. Maar niemand legt uit hoe ze werken. Ontdek de 7 vragen die échte kwaliteit onthullen, van een filmmaker met 10 jaar ervaring.',
     metaDescription: 'Iedereen toont reels. Niemand legt uit hoe ze werken. 7 vragen die kwaliteit onthullen. Van filmmaker met 10 jaar ervaring.',
     date: '2025-12-28',
-    image: '/Assets/Marketing material/Assets/AGII - DAAN BTS-8.jpg',
+    image: '/assets/insights/post3-hero.jpg',
     category: 'Gids & Advies',
     content: post3Content,
     seo: {
