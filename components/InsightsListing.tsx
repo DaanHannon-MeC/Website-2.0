@@ -65,8 +65,9 @@ const InsightsListing: React.FC = () => {
               <div className="relative overflow-hidden rounded-sm">
                 <img
                   src={featuredPost.image}
-                  alt={featuredPost.title}
+                  alt={`${featuredPost.title} - Videoproductie Mechelen door Zeget'is`}
                   className="w-full aspect-[21/9] md:aspect-[3/1] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  loading="eager"
                 />
 
                 {/* Category Badge */}
@@ -131,10 +132,11 @@ const InsightsListing: React.FC = () => {
                       <div className="relative overflow-hidden mb-6 rounded-sm">
                         <img
                           src={post.image}
-                          alt={post.title}
+                          alt={`${post.title} - ${post.category} Zeget'is Mechelen`}
                           className={`w-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 ${
                             isLarge ? 'aspect-[16/9]' : 'aspect-[4/5]'
                           }`}
+                          loading="lazy"
                         />
                         <div className="absolute top-4 left-4 px-4 py-1 bg-brand-green/90 backdrop-blur-sm">
                           <span className="text-[10px] tracking-widest uppercase font-bold text-brand-black">

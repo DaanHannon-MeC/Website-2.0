@@ -10,7 +10,46 @@ const InsightsPost: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+
+    // Update document title and meta tags for SEO
+    if (post) {
+      document.title = `${post.title} | Zeget'is Videoproductie Mechelen`;
+
+      // Update meta description
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', post.metaDescription);
+      }
+
+      // Update meta keywords
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        const keywords = [post.seo.keywords.primary, ...post.seo.keywords.secondary].join(', ');
+        metaKeywords.setAttribute('content', keywords);
+      }
+
+      // Update OG tags
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) {
+        ogTitle.setAttribute('content', post.title);
+      }
+
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription) {
+        ogDescription.setAttribute('content', post.metaDescription);
+      }
+
+      const ogImage = document.querySelector('meta[property="og:image"]');
+      if (ogImage) {
+        ogImage.setAttribute('content', `https://zegetis.be${post.image}`);
+      }
+
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) {
+        ogUrl.setAttribute('content', `https://zegetis.be/insights/${post.slug}`);
+      }
+    }
+  }, [slug, post]);
 
   if (!post) {
     return <Navigate to="/insights" replace />;
@@ -51,8 +90,9 @@ const InsightsPost: React.FC = () => {
           <div className="relative overflow-hidden rounded-sm max-w-6xl mx-auto">
             <img
               src={post.image}
-              alt={post.title}
+              alt={`${post.title} - ${post.seo.keywords.primary} door Zeget'is videoproductie Mechelen`}
               className="w-full aspect-[21/9] object-cover filter grayscale"
+              loading="eager"
             />
             <div className="absolute top-6 left-6 px-6 py-2 bg-brand-green/90 backdrop-blur-sm">
               <span className="text-xs tracking-widest uppercase font-bold text-brand-black">
@@ -182,13 +222,13 @@ const InsightsPost: React.FC = () => {
                 Laten we in een 'Zeget'is' call (30 minuten) bespreken wat jouw project nodig heeft.
                 Geen verplichtingen, gewoon eerlijk advies.
               </p>
-              <Link
-                to="/#contact"
+              <a
+                href="/#contact"
                 className="inline-flex items-center gap-4 px-8 py-4 bg-brand-green text-brand-black font-bold uppercase tracking-widest text-sm hover:bg-brand-green/90 transition-all"
               >
                 Plan je gesprek
                 <span className="text-xl">→</span>
-              </Link>
+              </a>
             </div>
           </div>
 

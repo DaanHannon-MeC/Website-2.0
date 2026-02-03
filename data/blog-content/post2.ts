@@ -134,44 +134,6 @@ export const post2Content = {
 <p>Waarom foto's sneller? Omdat ik weet dat bedrijven vaak eerst product pages live willen krijgen, en dan pas video toevoegen. Als je andersom werkt (video eerst), kan dat—maar meestal is dit de praktische volgorde.</p>`
     },
     {
-      heading: "Case: Local Business Comparison (Voor/Na)",
-      content: `<p>Concreet voorbeeld van een klant in 2830 die de switch maakte van apart naar gecombineerd.</p>
-
-<h3>Voor: Traditionele Aanpak</h3>
-
-<p><strong>Situatie:</strong> Productiebedrijf lanceert nieuwe productlijn. Boekt lokale fotograaf voor product shots (€950), later besluit ze ook video te willen, boekt videograaf (€2.400).</p>
-
-<p><strong>Resultaat:</strong></p>
-<ul>
-<li>Totale kosten: €3.350</li>
-<li>Twee briefings nodig</li>
-<li>Twee dagen productie interrupts (team moest twee keer beschikbaar zijn)</li>
-<li>Visuele inconsistency: foto's hadden koele tint, video warmer—voelde niet als één brand</li>
-<li>Timeline: 3 weken tussen eerste foto's en finale video</li>
-</ul>
-
-<p><strong>Feedback:</strong> "De kwaliteit was goed, maar het voelde als twee aparte projecten. En we hadden niet verwacht dat het zo lang zou duren."</p>
-
-<h3>Na: Zeget'is Gecombineerde Aanpak</h3>
-
-<p><strong>Situatie:</strong> Zelfde bedrijf, nieuwe productlijn jaar later. Nu één shoot voor beide.</p>
-
-<p><strong>Resultaat:</strong></p>
-<ul>
-<li>Totale kosten: €2.450</li>
-<li>Eén briefing (30 min Zeget'is call)</li>
-<li>Eén dag productie (4.5 uur on-site)</li>
-<li>Visuele consistency: zelfde kleurprofiel, zelfde stijl, één verhaal</li>
-<li>Timeline: foto's na 4 dagen, video na 9 dagen—beide binnen 2 weken klaar</li>
-</ul>
-
-<p><strong>Feedback:</strong> "Dit is hoe het hoort te werken. Waarom doet niet iedereen dit?"</p>
-
-<p><strong>Besparing:</strong> €900 + oneindige tijd en coördinatie stress.</p>
-
-<p>En het subtiele verschil: hun marketing team gebruikte de content nu daadwerkelijk consistent over alle kanalen. Voor? De foto's gingen naar website, video naar LinkedIn—maar ze voelden te verschillend om te mixen. Nu? Grid posts op Instagram met foto én video door elkaar. Omdat het één coherent geheel is.</p>`
-    },
-    {
       heading: "Wanneer Werkt Dit? (En Wanneer Niet)",
       content: `<p>Eerlijkheid: gecombineerde shoots zijn niet altijd de beste keuze. Hier is wanneer het wel en niet werkt.</p>
 
