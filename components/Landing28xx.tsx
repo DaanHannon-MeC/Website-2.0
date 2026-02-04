@@ -1,4 +1,5 @@
 import React from 'react';
+import { PROJECTS, POSTAL_DATA } from '../constants';
 
 const Landing28xx: React.FC = () => {
   return (
@@ -30,15 +31,28 @@ const Landing28xx: React.FC = () => {
           </div>
 
           <h1 className="font-serif text-5xl md:text-7xl leading-tight mb-8">
-            Premium Video & Foto<br />
-            <span className="italic text-brand-green">Speciaal voor Jouw Regio</span>
+            Zit Je Te Kijken Naar Wat<br />
+            <span className="italic text-brand-green">Je Concurrent Op Instagram Post?</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-brand-cream/70 font-light leading-relaxed mb-12 max-w-2xl mx-auto">
-            10 jaar expertise met grote merken zoals Deloitte, Technopolis en Stad Mechelen. Nu rechtstreeks beschikbaar voor bedrijven in de 28XX regio - zonder tussenpersonen.
+          <p className="text-xl md:text-2xl text-brand-cream/80 mb-8">
+            Video zoals Deloitte en Technopolis het krijgen,<br />
+            maar dan voor bedrijven in 2800.<br />
+            <span className="text-brand-green font-bold">Agency kwaliteit, KMO prijzen.</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="inline-block bg-brand-green/10 border border-brand-green/30 px-6 py-4 rounded-sm mb-8">
+            <p className="text-brand-cream">
+              <span className="text-brand-green font-bold">Voorbeeld:</span>
+              {' '}Standaard bedrijfsvideo{' '}
+              <span className="line-through text-brand-cream/50">€2.100</span>
+              {' '}→{' '}
+              <span className="text-brand-green font-bold text-xl">€1.500</span>
+              {' '}<span className="text-brand-cream/70">(bespaar €600)</span>
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
             <a
               href="#calendar"
               className="group px-8 py-4 bg-brand-green text-brand-black font-bold text-lg rounded-sm hover:bg-brand-green/90 transition-all flex items-center gap-4"
@@ -60,7 +74,209 @@ const Landing28xx: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Problem-Solution Grid */}
+      <section className="py-32 bg-brand-black">
+        <div className="container mx-auto px-8 md:px-12">
+          <div className="text-center mb-20">
+            <p className="text-brand-green uppercase tracking-wider mb-4">Voor Perfectionisten Die Vastzitten</p>
+            <h2 className="font-serif text-4xl md:text-6xl italic">
+              Drie Problemen Die Ik <span className="text-brand-green">Snap</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            {/* Problem 1 */}
+            <div>
+              <div className="text-6xl font-serif text-brand-green/30 mb-4">01</div>
+              <h3 className="font-serif text-2xl mb-4">
+                "Good enough" is niet goed genoeg
+              </h3>
+              <p className="text-brand-cream/70 mb-4">
+                Je standards zijn te hoog om te settlen voor de mediocre videograaf.
+                Dus doe je... niks. En ondertussen ziet je concurrent er professioneler uit.
+              </p>
+              <p className="text-brand-green font-bold">
+                → Agency quality at KMO pricing
+              </p>
+            </div>
+
+            {/* Problem 2 */}
+            <div>
+              <div className="text-6xl font-serif text-brand-green/30 mb-4">02</div>
+              <h3 className="font-serif text-2xl mb-4">
+                Je product is beter, maar zij zien er beter uit
+              </h3>
+              <p className="text-brand-cream/70 mb-4">
+                Het verschil tussen jou en je concurrent? Niet je werk.
+                Maar wel hoe jullie eruit zien online. Visual credibility gap.
+              </p>
+              <p className="text-brand-green font-bold">
+                → Close the credibility gap
+              </p>
+            </div>
+
+            {/* Problem 3 */}
+            <div>
+              <div className="text-6xl font-serif text-brand-green/30 mb-4">03</div>
+              <h3 className="font-serif text-2xl mb-4">
+                Geen tijd, geen expertise voor content
+              </h3>
+              <p className="text-brand-cream/70 mb-4">
+                Je bent goed in wat je doet. Marketing content?
+                Daar heb je geen tijd voor. En als je eerlijk bent: ook geen zin in.
+              </p>
+              <p className="text-brand-green font-bold">
+                → Full-service, concept to delivery
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="bewijs" className="py-32 bg-brand-cream text-brand-black">
+        <div className="container mx-auto px-8 md:px-12">
+          <div className="text-center mb-20">
+            <p className="text-brand-black/50 uppercase tracking-wider mb-4">Portfolio · 10 Jaar Agency Werk</p>
+            <h2 className="font-serif text-4xl md:text-6xl italic mb-6">
+              Dit Niveau, Maar Dan<br/>
+              <span className="text-brand-green">Voor Jouw Bedrijf</span>
+            </h2>
+            <p className="text-brand-black/70 text-lg max-w-3xl mx-auto">
+              Na 10 jaar werken voor Deloitte, Technopolis, Stad Mechelen—nu beschikbaar
+              voor lokale bedrijven. Zelfde kwaliteit, zonder agency markup.
+            </p>
+          </div>
+
+          {/* Portfolio Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Hero Project - Stad Mechelen (PROJECTS[4]) - spans 2 cols */}
+            <div className="lg:col-span-2 lg:row-span-2 relative group cursor-pointer">
+              <img
+                src={PROJECTS[4].thumbnail}
+                alt={PROJECTS[4].title}
+                className="w-full h-full object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-brand-black/80 to-transparent">
+                <span className="text-xs uppercase text-brand-green tracking-wider">{PROJECTS[4].category}</span>
+                <h3 className="font-serif text-2xl text-brand-cream">{PROJECTS[4].title}</h3>
+              </div>
+            </div>
+
+            {/* Supporting Projects */}
+            <div className="relative group cursor-pointer">
+              <img
+                src={PROJECTS[0].thumbnail}
+                alt={PROJECTS[0].title}
+                className="aspect-[4/3] object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            <div className="relative group cursor-pointer">
+              <img
+                src={PROJECTS[5].thumbnail}
+                alt={PROJECTS[5].title}
+                className="aspect-[4/3] object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            <div className="relative group cursor-pointer">
+              <img
+                src={PROJECTS[3].thumbnail}
+                alt={PROJECTS[3].title}
+                className="aspect-[4/3] object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            <div className="relative group cursor-pointer">
+              <img
+                src={PROJECTS[1].thumbnail}
+                alt={PROJECTS[1].title}
+                className="aspect-[4/3] object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="/#work"
+              className="inline-flex items-center gap-2 text-brand-black hover:text-brand-green font-bold transition-colors"
+            >
+              Volledig Portfolio Bekijken
+              <span className="text-xl">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Local/Regional Section */}
+      <section className="py-32 bg-brand-black">
+        <div className="container mx-auto px-8 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+            <div>
+              <p className="text-brand-green uppercase tracking-wider mb-6">
+                Lokaal · Direct · Geen Reiskosten
+              </p>
+              <h2 className="font-serif text-4xl md:text-6xl italic mb-8">
+                Gevestigd in <span className="text-brand-green">Hazewinkel</span>
+              </h2>
+              <p className="text-brand-cream/80 text-lg mb-6">
+                10 jaar heb ik agency sets gediend. Nu werk ik lokaal,
+                rechtstreeks met bedrijven in de buurt. 28% korting voor de
+                28XX regio omdat je in mijn thuisbasis zit.
+              </p>
+              <p className="text-brand-cream/70 mb-8">
+                Geen reiskosten. Snellere turnaround. Bereikbaar voor last-minute shoots.
+                En ik ken de lokale economie—van Willebroek tot Boom, van Puurs tot Mechelen centrum.
+              </p>
+
+              {/* Postal Codes Grid */}
+              <div className="bg-brand-green/5 border border-brand-green/20 rounded-sm p-6">
+                <p className="text-brand-green text-xs uppercase mb-4 tracking-wider">✓ Postcodes In Actie</p>
+                <div className="flex flex-wrap gap-2">
+                  {POSTAL_DATA.map(postal => (
+                    <span
+                      key={postal.code}
+                      className="px-3 py-1 bg-brand-cream/5 text-brand-cream/70 text-xs rounded-sm"
+                    >
+                      {postal.code} {postal.city}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Savings Calculator */}
+            <div className="relative">
+              <div className="bg-brand-cream rounded-sm p-10 shadow-2xl">
+                <h3 className="font-serif text-3xl text-brand-black mb-6">
+                  Wat 28% Korting<br/>
+                  <span className="text-brand-green italic">Echt Betekent</span>
+                </h3>
+                <div className="space-y-4 text-brand-black/80">
+                  <div className="flex justify-between items-center pb-4 border-b border-brand-black/10">
+                    <span>Standaard Bedrijfsvideo</span>
+                    <div className="text-right">
+                      <div className="line-through text-brand-black/40 text-sm">€2.100</div>
+                      <div className="text-brand-green font-bold text-xl">€1.500</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center pb-4 border-b border-brand-black/10">
+                    <span>Premium Project</span>
+                    <div className="text-right">
+                      <div className="line-through text-brand-black/40 text-sm">€6.000</div>
+                      <div className="text-brand-green font-bold text-xl">€4.300</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center pt-2">
+                    <span className="text-sm text-brand-black/60">Gemiddelde besparing</span>
+                    <span className="text-brand-green font-bold">€600 - €1.700</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - with 28% pricing */}
       <section id="services" className="py-32 bg-brand-cream text-brand-black">
         <div className="container mx-auto px-8 md:px-12">
           <h2 className="font-serif text-4xl md:text-6xl italic text-center mb-16">
@@ -71,25 +287,28 @@ const Landing28xx: React.FC = () => {
             <div className="bg-white p-8 rounded-sm shadow-lg">
               <div className="text-brand-green text-4xl mb-4">🎥</div>
               <h3 className="font-serif text-2xl font-bold mb-4">Videoproductie</h3>
-              <p className="text-brand-black/70 leading-relaxed">
+              <p className="text-brand-black/70 leading-relaxed mb-4">
                 Van bedrijfsvideo's tot commerciële content en testimonials. Elk project krijgt dezelfde high-end kwaliteit die grote merken verwachten.
               </p>
+              <p className="text-brand-green font-bold">Vanaf €1.500 (28% korting)</p>
             </div>
 
             <div className="bg-white p-8 rounded-sm shadow-lg">
               <div className="text-brand-green text-4xl mb-4">📸</div>
               <h3 className="font-serif text-2xl font-bold mb-4">Fotografie</h3>
-              <p className="text-brand-black/70 leading-relaxed">
+              <p className="text-brand-black/70 leading-relaxed mb-4">
                 Professionele bedrijfsfotografie, productfoto's en portfolio shoots. Beelden die je merk naar een hoger niveau tillen.
               </p>
+              <p className="text-brand-green font-bold">Combos vanaf €960</p>
             </div>
 
             <div className="bg-white p-8 rounded-sm shadow-lg">
               <div className="text-brand-green text-4xl mb-4">💡</div>
               <h3 className="font-serif text-2xl font-bold mb-4">Marketing Support</h3>
-              <p className="text-brand-black/70 leading-relaxed">
+              <p className="text-brand-black/70 leading-relaxed mb-4">
                 Van strategie tot executie. Ik help je content creëren die écht impact maakt op je doelgroep.
               </p>
+              <p className="text-brand-green font-bold">Full-service pakket €4.300</p>
             </div>
           </div>
         </div>
@@ -98,43 +317,72 @@ const Landing28xx: React.FC = () => {
       {/* Calendar Booking Section */}
       <section id="calendar" className="py-32 bg-brand-black">
         <div className="container mx-auto px-8 md:px-12 text-center">
-          <h2 className="font-serif text-4xl md:text-6xl italic mb-8">
-            Klaar Om Te <span className="text-brand-green">Starten?</span>
-          </h2>
-          <p className="text-xl text-brand-cream/70 mb-16 max-w-2xl mx-auto">
-            Kies hieronder wat het beste bij jou past
-          </p>
+          {/* Risk Reversal */}
+          <div className="mb-16">
+            <p className="text-brand-green uppercase tracking-wider mb-6">
+              Vrijblijvend · Geen Verplichtingen
+            </p>
+            <h2 className="font-serif text-4xl md:text-6xl italic mb-8">
+              Klaar Om Je <span className="text-brand-green">Verhaal</span> Te Vertellen?
+            </h2>
+            <p className="text-xl text-brand-cream/70 mb-4 max-w-2xl mx-auto">
+              30 minuten kennismaken. Ik vertel je eerlijk of ik de juiste fit ben.
+              En jij beslist of we verder gaan.
+            </p>
+            <p className="text-brand-cream/50 italic">
+              Geen sales pitch. Gewoon een eerlijk gesprek over wat je nodig hebt.
+            </p>
+          </div>
 
+          {/* Updated CTA cards with bullets */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Quick Call */}
-            <div className="bg-brand-cream text-brand-black p-8 rounded-sm">
-              <h3 className="font-serif text-2xl font-bold mb-4">🗓️ Kennismakingsgesprek</h3>
+            {/* Kennismakingsgesprek - Enhanced */}
+            <div className="bg-brand-cream text-brand-black p-8 rounded-sm text-left">
+              <div className="inline-block px-4 py-1 bg-brand-green/20 rounded-full text-xs uppercase font-bold text-brand-green mb-4">
+                Aanbevolen
+              </div>
+              <h3 className="font-serif text-3xl font-bold mb-4">
+                🗓️ Kennismakingsgesprek
+              </h3>
               <p className="mb-6 text-brand-black/70">
-                30 minuten om elkaar te leren kennen en te zien of we een match zijn.
+                30 minuten om elkaar te leren kennen. Ik leg uit hoe ik werk,
+                jij vertelt wat je nodig hebt. Vrijblijvend. Geen druk.
               </p>
+              <ul className="text-sm text-brand-black/60 mb-6 space-y-2">
+                <li>✓ Bespreek je project</li>
+                <li>✓ Krijg een eerlijke mening</li>
+                <li>✓ Indicatieve offerte op maat</li>
+              </ul>
               <a
                 href="https://calendar.app.google/brhH4yug1Upcvn5dA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-brand-green text-brand-black font-bold rounded-sm hover:bg-brand-green/90 transition-all"
+                className="block w-full text-center px-6 py-4 bg-brand-green text-brand-black font-bold rounded-sm hover:bg-brand-green/90 transition-all"
               >
-                Plan een Babbel
+                Plan een Babbel →
               </a>
             </div>
 
-            {/* Direct Booking */}
-            <div className="bg-brand-green text-brand-black p-8 rounded-sm">
-              <h3 className="font-serif text-2xl font-bold mb-4">🎬 Direct een Shoot Boeken</h3>
+            {/* Direct Booking - Enhanced */}
+            <div className="bg-brand-green text-brand-black p-8 rounded-sm text-left">
+              <h3 className="font-serif text-3xl font-bold mb-4">
+                🎬 Direct een Shoot Boeken
+              </h3>
               <p className="mb-6 text-brand-black/80">
                 Weet je al wat je wil? Boek direct een draaidag en claim je 28% korting.
               </p>
+              <ul className="text-sm text-brand-black/70 mb-6 space-y-2">
+                <li>✓ Kies je draaidag</li>
+                <li>✓ 28% korting toegepast</li>
+                <li>✓ Direct aan de slag</li>
+              </ul>
               <a
                 href="https://calendar.app.google/XKjMXfBMbewQ5MKc6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-brand-black text-brand-cream font-bold rounded-sm hover:bg-brand-black/90 transition-all"
+                className="block w-full text-center px-6 py-4 bg-brand-black text-brand-cream font-bold rounded-sm hover:bg-brand-black/90 transition-all"
               >
-                Boek een Draaidag
+                Boek een Draaidag →
               </a>
             </div>
           </div>
