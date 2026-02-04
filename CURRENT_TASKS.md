@@ -2,22 +2,29 @@
 
 ## Active Tasks
 
-### 1. Portfolio Integration & Text Refinements
-**Status:** In Progress
-**Priority:** High
-**Description:** Replace 3D gallery with Portfolio component, fix calendar URLs, update text
-
-**Sub-tasks:**
-- [ ] Phase 1: Replace InfiniteGallery with Portfolio component
-- [ ] Phase 2: Swap calendar URLs (fix reversed links)
-- [ ] Phase 3: Update Problem 1 text ("mediocre videograaf" → "content die je zelf maakt")
-- [ ] Phase 4: Add Video+Foto combo to pricing table with asterisks
-- [ ] Phase 5: Replace "10 jaar agency werk/werken" with "10 jaar filmen/gefilmd"
-- [ ] Push changes to GitHub
+No active tasks.
 
 ---
 
 ## Completed Tasks
+
+### Portfolio Integration & Text Refinements
+**Completed:** 2026-02-04
+**Description:** Replace 3D gallery with Portfolio component, fix calendar URLs, update text
+
+**Completed Sub-tasks:**
+- [x] Phase 1: Replace InfiniteGallery with Portfolio component
+- [x] Phase 2: Swap calendar URLs (fix reversed links)
+- [x] Phase 3: Update Problem 1 text ("mediocre videograaf" → "content die je zelf maakt")
+- [x] Phase 4: Add Video+Foto combo to pricing table with asterisks
+- [x] Phase 5: Replace "10 jaar agency werk/werken" with "10 jaar filmen/gefilmd"
+- [x] Push changes to GitHub
+
+**Files Modified:**
+- `components/Landing28xx.tsx` - Portfolio integration, text updates, pricing table enhancements
+- `components/Contact.tsx` - Calendar URL fix for consistency
+
+**Commit:** 24832eb - "Portfolio integration & text refinements for 28XX landing page"
 
 ### Website Text Improvements & 3D Portfolio Gallery
 **Completed:** 2026-02-04
