@@ -1,5 +1,6 @@
 import React from 'react';
 import { PROJECTS, POSTAL_DATA } from '../constants';
+import InfiniteGallery from './InfiniteGallery';
 
 const Landing28xx: React.FC = () => {
   return (
@@ -31,12 +32,12 @@ const Landing28xx: React.FC = () => {
           </div>
 
           <h1 className="font-serif text-5xl md:text-7xl leading-tight mb-8">
-            Zit Je Te Kijken Naar Wat<br />
-            <span className="italic text-brand-green">Je Concurrent Op Instagram Post?</span>
+            Zit je te kijken naar wat<br />
+            <span className="italic text-brand-green">je concurrent op Instagram post?</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-brand-cream/80 mb-8">
-            Video zoals Deloitte en Technopolis het krijgen,<br />
+            Video zoals Telenet en Primus het krijgen,<br />
             maar dan voor bedrijven in 2800.<br />
             <span className="text-brand-green font-bold">Agency kwaliteit, KMO prijzen.</span>
           </p>
@@ -78,9 +79,9 @@ const Landing28xx: React.FC = () => {
       <section className="py-32 bg-brand-black">
         <div className="container mx-auto px-8 md:px-12">
           <div className="text-center mb-20">
-            <p className="text-brand-green uppercase tracking-wider mb-4">Voor Perfectionisten Die Vastzitten</p>
+            <p className="text-brand-green uppercase tracking-wider mb-4">Voor perfectionisten die vastzitten</p>
             <h2 className="font-serif text-4xl md:text-6xl italic">
-              Drie Problemen Die Ik <span className="text-brand-green">Snap</span>
+              Drie problemen die ik <span className="text-brand-green">snap</span>
             </h2>
           </div>
 
@@ -133,65 +134,41 @@ const Landing28xx: React.FC = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
+      {/* Portfolio Section - 3D Gallery */}
       <section id="bewijs" className="py-32 bg-brand-cream text-brand-black">
         <div className="container mx-auto px-8 md:px-12">
-          <div className="text-center mb-20">
-            <p className="text-brand-black/50 uppercase tracking-wider mb-4">Portfolio · 10 Jaar Agency Werk</p>
+          <div className="text-center mb-12">
+            <p className="text-brand-black/50 uppercase tracking-wider mb-4">Portfolio · 10 jaar agency werk</p>
             <h2 className="font-serif text-4xl md:text-6xl italic mb-6">
-              Dit Niveau, Maar Dan<br/>
-              <span className="text-brand-green">Voor Jouw Bedrijf</span>
+              Dit niveau, maar dan<br/>
+              <span className="text-brand-green">voor jouw bedrijf</span>
             </h2>
             <p className="text-brand-black/70 text-lg max-w-3xl mx-auto">
-              Na 10 jaar werken voor Deloitte, Technopolis, Stad Mechelen—nu beschikbaar
+              Na 10 jaar werken voor Telenet, Primus, Stad Mechelen—nu beschikbaar
               voor lokale bedrijven. Zelfde kwaliteit, zonder agency markup.
             </p>
           </div>
 
-          {/* Portfolio Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Hero Project - Stad Mechelen (PROJECTS[4]) - spans 2 cols */}
-            <div className="lg:col-span-2 lg:row-span-2 relative group cursor-pointer">
-              <img
-                src={PROJECTS[4].thumbnail}
-                alt={PROJECTS[4].title}
-                className="w-full h-full object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-brand-black/80 to-transparent">
-                <span className="text-xs uppercase text-brand-green tracking-wider">{PROJECTS[4].category}</span>
-                <h3 className="font-serif text-2xl text-brand-cream">{PROJECTS[4].title}</h3>
-              </div>
-            </div>
-
-            {/* Supporting Projects */}
-            <div className="relative group cursor-pointer">
-              <img
-                src={PROJECTS[0].thumbnail}
-                alt={PROJECTS[0].title}
-                className="aspect-[4/3] object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-            <div className="relative group cursor-pointer">
-              <img
-                src={PROJECTS[5].thumbnail}
-                alt={PROJECTS[5].title}
-                className="aspect-[4/3] object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-            <div className="relative group cursor-pointer">
-              <img
-                src={PROJECTS[3].thumbnail}
-                alt={PROJECTS[3].title}
-                className="aspect-[4/3] object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-            <div className="relative group cursor-pointer">
-              <img
-                src={PROJECTS[1].thumbnail}
-                alt={PROJECTS[1].title}
-                className="aspect-[4/3] object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
+          {/* 3D Infinite Gallery */}
+          <div className="h-[600px] md:h-[800px]">
+            <InfiniteGallery
+              images={PROJECTS.map(p => ({
+                src: p.thumbnail,
+                alt: p.title
+              }))}
+              speed={1.2}
+              visibleCount={6}
+              fadeSettings={{
+                fadeIn: { start: 0.05, end: 0.25 },
+                fadeOut: { start: 0.4, end: 0.43 }
+              }}
+              blurSettings={{
+                blurIn: { start: 0.0, end: 0.1 },
+                blurOut: { start: 0.4, end: 0.43 },
+                maxBlur: 8.0
+              }}
+              className="h-full w-full"
+            />
           </div>
 
           <div className="text-center mt-12">
@@ -199,7 +176,7 @@ const Landing28xx: React.FC = () => {
               href="/#work"
               className="inline-flex items-center gap-2 text-brand-black hover:text-brand-green font-bold transition-colors"
             >
-              Volledig Portfolio Bekijken
+              Volledig portfolio bekijken
               <span className="text-xl">→</span>
             </a>
           </div>
@@ -247,8 +224,8 @@ const Landing28xx: React.FC = () => {
             <div className="relative">
               <div className="bg-brand-cream rounded-sm p-10 shadow-2xl">
                 <h3 className="font-serif text-3xl text-brand-black mb-6">
-                  Wat 28% Korting<br/>
-                  <span className="text-brand-green italic">Echt Betekent</span>
+                  Wat 28% korting<br/>
+                  <span className="text-brand-green italic">echt betekent</span>
                 </h3>
                 <div className="space-y-4 text-brand-black/80">
                   <div className="flex justify-between items-center pb-4 border-b border-brand-black/10">
@@ -323,7 +300,7 @@ const Landing28xx: React.FC = () => {
               Vrijblijvend · Geen Verplichtingen
             </p>
             <h2 className="font-serif text-4xl md:text-6xl italic mb-8">
-              Klaar Om Je <span className="text-brand-green">Verhaal</span> Te Vertellen?
+              Klaar om je <span className="text-brand-green">verhaal</span> te vertellen?
             </h2>
             <p className="text-xl text-brand-cream/70 mb-4 max-w-2xl mx-auto">
               30 minuten kennismaken. Ik vertel je eerlijk of ik de juiste fit ben.

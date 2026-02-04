@@ -26,7 +26,7 @@ Speciaal voor Jouw Regio
 Zit Je Te Kijken Naar Wat
 Je Concurrent Op Instagram Post?
 
-Video zoals Deloitte en Technopolis het krijgen,
+Video zoals Deloitte en Telenet het krijgen,
 maar dan voor bedrijven in 2800.
 Agency kwaliteit, KMO prijzen.
 ```
@@ -127,7 +127,7 @@ Replace generic services section with actual portfolio:
       <span className="text-brand-green">Voor Jouw Bedrijf</span>
     </h2>
     <p className="text-brand-black/70 text-lg">
-      Na 10 jaar werken voor Deloitte, Technopolis, Stad Mechelen—nu beschikbaar
+      Na 10 jaar werken voor Deloitte, Telenet, Stad Mechelen—nu beschikbaar
       voor lokale bedrijven. Zelfde kwaliteit, zonder agency markup.
     </p>
   </div>

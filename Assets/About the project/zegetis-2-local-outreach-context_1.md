@@ -9,7 +9,7 @@
 
 Launching local video/photo production outreach for Zeget'is targeting companies in Flanders with postal codes starting with **28XX**. Moving from working through production houses and big brands to direct relationships with local businesses.
 
-**Core positioning:** "High-end production quality (normally reserved for companies like Deloitte, Technopolis, Stad Mechelen) now accessible to local businesses in 28XX."
+**Core positioning:** "High-end production quality (normally reserved for companies like Telenet, Primus, Stad Mechelen) now accessible to local businesses in 28XX."
 
 ---
 

@@ -2,7 +2,21 @@
 
 ## Active Tasks
 
-No active tasks.
+### 1. Website Text Improvements & 3D Portfolio Gallery
+**Status:** In Progress
+**Priority:** High
+**Description:** Calendar URL swaps, fix AI-written text patterns, update brand names, implement 3D gallery
+
+**Sub-tasks:**
+- [x] Phase 1: Swap calendar URLs in Contact.tsx
+- [x] Phase 2: Fix title case capitalization in Landing28xx.tsx (8 instances)
+- [x] Phase 3: Replace "Technopolis" with "Telenet/Primus" (4 files)
+- [x] Phase 4.1: Install Three.js dependencies
+- [x] Phase 4.2: Create InfiniteGallery.tsx component
+- [x] Phase 4.3: Integrate InfiniteGallery into Landing28xx.tsx
+- [ ] Test calendar URLs functionality
+- [ ] Test 3D gallery rendering and interactions
+- [ ] Push changes to GitHub
 
 ---
 
