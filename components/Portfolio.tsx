@@ -124,7 +124,7 @@ const Portfolio: React.FC = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
+      setMousePos({ x: e.clientX, y: e.clientY + window.scrollY });
     };
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
@@ -139,7 +139,7 @@ const Portfolio: React.FC = () => {
       <div
         className="hidden md:flex custom-cursor items-center justify-center pointer-events-none"
         style={{
-          transform: `translate3d(${mousePos.x}px, ${mousePos.y}px, 0)`,
+          transform: `translate3d(${mousePos.x}px, ${mousePos.y - window.scrollY}px, 0)`,
           opacity: isHoveringItem ? 1 : 0
         }}
       >

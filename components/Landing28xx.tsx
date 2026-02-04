@@ -38,7 +38,7 @@ const Landing28xx: React.FC = () => {
 
           <p className="text-xl md:text-2xl text-brand-cream/80 mb-8">
             Video zoals Telenet en Primus het krijgen,<br />
-            maar dan voor bedrijven in 2800.<br />
+            maar dan voor bedrijven in 28..<br />
             <span className="text-brand-green font-bold">Agency kwaliteit, KMO prijzen.</span>
           </p>
 
@@ -220,7 +220,7 @@ const Landing28xx: React.FC = () => {
                     <span>Video + Foto Combo</span>
                     <div className="text-right">
                       <div className="line-through text-brand-black/40 text-sm">€3.200</div>
-                      <div className="text-brand-green font-bold text-xl">€2.304*</div>
+                      <div className="text-brand-green font-bold text-xl">€2.300*</div>
                     </div>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-brand-black/10">
