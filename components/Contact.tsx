@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Kennismakingsgesprek */}
             <a
-              href="https://calendar.app.google/brhH4yug1Upcvn5dA"
+              href="https://calendar.app.google/XKjMXfBMbewQ5MKc6"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-cream/10 border border-brand-green/20 rounded-xl p-6 text-center hover:border-brand-green/40 hover:bg-brand-cream/15 transition-all group"
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
 
             {/* Direct Booking */}
             <a
-              href="https://calendar.app.google/XKjMXfBMbewQ5MKc6"
+              href="https://calendar.app.google/brhH4yug1Upcvn5dA"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-green/10 border border-brand-green/40 rounded-xl p-6 text-center hover:border-brand-green hover:bg-brand-green/15 transition-all group"

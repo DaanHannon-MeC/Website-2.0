@@ -1,6 +1,6 @@
 import React from 'react';
 import { PROJECTS, POSTAL_DATA } from '../constants';
-import InfiniteGallery from './InfiniteGallery';
+import Portfolio from './Portfolio';
 
 const Landing28xx: React.FC = () => {
   return (
@@ -93,7 +93,7 @@ const Landing28xx: React.FC = () => {
                 "Good enough" is niet goed genoeg
               </h3>
               <p className="text-brand-cream/70 mb-4">
-                Je standards zijn te hoog om te settlen voor de mediocre videograaf.
+                Je standards zijn te hoog om te settlen voor content die je zelf maakt.
                 Dus doe je... niks. En ondertussen ziet je concurrent er professioneler uit.
               </p>
               <p className="text-brand-green font-bold">
@@ -134,47 +134,28 @@ const Landing28xx: React.FC = () => {
         </div>
       </section>
 
-      {/* Portfolio Section - 3D Gallery */}
-      <section id="bewijs" className="py-32 bg-brand-cream text-brand-black">
+      {/* Portfolio Section */}
+      <section id="bewijs" className="py-32 bg-brand-black">
         <div className="container mx-auto px-8 md:px-12">
-          <div className="text-center mb-12">
-            <p className="text-brand-black/50 uppercase tracking-wider mb-4">Portfolio · 10 jaar agency werk</p>
-            <h2 className="font-serif text-4xl md:text-6xl italic mb-6">
+          <div className="text-center mb-12 max-w-4xl mx-auto">
+            <p className="text-brand-green/50 uppercase tracking-wider mb-4">Portfolio · 10 jaar filmen</p>
+            <h2 className="font-serif text-4xl md:text-6xl italic mb-6 text-brand-cream">
               Dit niveau, maar dan<br/>
               <span className="text-brand-green">voor jouw bedrijf</span>
             </h2>
-            <p className="text-brand-black/70 text-lg max-w-3xl mx-auto">
-              Na 10 jaar werken voor Telenet, Primus, Stad Mechelen—nu beschikbaar
+            <p className="text-brand-cream/70 text-lg">
+              Na 10 jaar filmen voor Telenet, Primus, Stad Mechelen—nu beschikbaar
               voor lokale bedrijven. Zelfde kwaliteit, zonder agency markup.
             </p>
           </div>
 
-          {/* 3D Infinite Gallery */}
-          <div className="h-[600px] md:h-[800px]">
-            <InfiniteGallery
-              images={PROJECTS.map(p => ({
-                src: p.thumbnail,
-                alt: p.title
-              }))}
-              speed={1.2}
-              visibleCount={6}
-              fadeSettings={{
-                fadeIn: { start: 0.05, end: 0.25 },
-                fadeOut: { start: 0.4, end: 0.43 }
-              }}
-              blurSettings={{
-                blurIn: { start: 0.0, end: 0.1 },
-                blurOut: { start: 0.4, end: 0.43 },
-                maxBlur: 8.0
-              }}
-              className="h-full w-full"
-            />
-          </div>
+          {/* Portfolio Component */}
+          <Portfolio />
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <a
               href="/#work"
-              className="inline-flex items-center gap-2 text-brand-black hover:text-brand-green font-bold transition-colors"
+              className="inline-flex items-center gap-2 text-brand-cream hover:text-brand-green font-bold transition-colors"
             >
               Volledig portfolio bekijken
               <span className="text-xl">→</span>
@@ -195,7 +176,7 @@ const Landing28xx: React.FC = () => {
                 Gevestigd in <span className="text-brand-green">Hazewinkel</span>
               </h2>
               <p className="text-brand-cream/80 text-lg mb-6">
-                10 jaar heb ik agency sets gediend. Nu werk ik lokaal,
+                10 jaar heb ik gefilmd voor agencies. Nu werk ik lokaal,
                 rechtstreeks met bedrijven in de buurt. 28% korting voor de
                 28XX regio omdat je in mijn thuisbasis zit.
               </p>
@@ -232,19 +213,31 @@ const Landing28xx: React.FC = () => {
                     <span>Standaard Bedrijfsvideo</span>
                     <div className="text-right">
                       <div className="line-through text-brand-black/40 text-sm">€2.100</div>
-                      <div className="text-brand-green font-bold text-xl">€1.500</div>
+                      <div className="text-brand-green font-bold text-xl">€1.500*</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center pb-4 border-b border-brand-black/10">
+                    <span>Video + Foto Combo</span>
+                    <div className="text-right">
+                      <div className="line-through text-brand-black/40 text-sm">€3.200</div>
+                      <div className="text-brand-green font-bold text-xl">€2.304*</div>
                     </div>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-brand-black/10">
                     <span>Premium Project</span>
                     <div className="text-right">
                       <div className="line-through text-brand-black/40 text-sm">€6.000</div>
-                      <div className="text-brand-green font-bold text-xl">€4.300</div>
+                      <div className="text-brand-green font-bold text-xl">€4.300*</div>
                     </div>
                   </div>
                   <div className="flex justify-between items-center pt-2">
                     <span className="text-sm text-brand-black/60">Gemiddelde besparing</span>
                     <span className="text-brand-green font-bold">€600 - €1.700</span>
+                  </div>
+                  <div className="pt-4 border-t border-brand-black/10">
+                    <p className="text-xs text-brand-black/50 italic">
+                      * Afhankelijk van gewenste output en eindvereisten
+                    </p>
                   </div>
                 </div>
               </div>
@@ -331,7 +324,7 @@ const Landing28xx: React.FC = () => {
                 <li>✓ Indicatieve offerte op maat</li>
               </ul>
               <a
-                href="https://calendar.app.google/brhH4yug1Upcvn5dA"
+                href="https://calendar.app.google/XKjMXfBMbewQ5MKc6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center px-6 py-4 bg-brand-green text-brand-black font-bold rounded-sm hover:bg-brand-green/90 transition-all"
@@ -354,7 +347,7 @@ const Landing28xx: React.FC = () => {
                 <li>✓ Direct aan de slag</li>
               </ul>
               <a
-                href="https://calendar.app.google/XKjMXfBMbewQ5MKc6"
+                href="https://calendar.app.google/brhH4yug1Upcvn5dA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center px-6 py-4 bg-brand-black text-brand-cream font-bold rounded-sm hover:bg-brand-black/90 transition-all"
