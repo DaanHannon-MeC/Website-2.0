@@ -31,7 +31,7 @@ const PortfolioItem: React.FC<{
     setIsHovered(true);
     onHover(true);
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      videoRef.current.play().catch(() => { });
     }
   };
 
@@ -53,6 +53,8 @@ const PortfolioItem: React.FC<{
     };
   };
 
+  const displayAspect = videoAspect < 0.8 ? 0.75 : videoAspect;
+
   return (
     <div
       ref={containerRef}
@@ -64,7 +66,7 @@ const PortfolioItem: React.FC<{
     >
       <div
         className={`relative overflow-hidden rounded-lg transition-all duration-700 ease-in-out ${isHovered ? 'scale-105 shadow-2xl' : 'scale-100 shadow-xl'}`}
-        style={{ aspectRatio: videoAspect }}
+        style={{ aspectRatio: displayAspect }}
       >
         {/* Thumbnail */}
         <img
@@ -144,10 +146,10 @@ const Portfolio: React.FC = () => {
         }}
       >
         <div className="w-24 h-24 bg-brand-green rounded-full flex items-center justify-center -translate-x-1/2 -translate-y-1/2 shadow-2xl scale-75 group">
-           <svg viewBox="0 0 24 24" className="w-8 h-8 fill-brand-cream ml-1" xmlns="http://www.w3.org/2000/svg">
-             <path d="M8 5v14l11-7z" />
-           </svg>
-           <div className="absolute inset-0 border border-brand-cream/30 rounded-full animate-ping scale-150"></div>
+          <svg viewBox="0 0 24 24" className="w-8 h-8 fill-brand-cream ml-1" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          <div className="absolute inset-0 border border-brand-cream/30 rounded-full animate-ping scale-150"></div>
         </div>
       </div>
 
