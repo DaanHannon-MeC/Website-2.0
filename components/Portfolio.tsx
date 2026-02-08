@@ -153,7 +153,7 @@ const Portfolio: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-24 md:gap-y-40 gap-x-12 items-start">
         {/* Item 1 - Agentschap (Larger, top) */}
         <div className="md:col-span-7">
           <PortfolioItem
@@ -165,8 +165,8 @@ const Portfolio: React.FC = () => {
           />
         </div>
 
-        {/* Item 2 - Thuis */}
-        <div className="md:col-span-5">
+        {/* Item 2 - Thuis (Vertical - narrower and offset) */}
+        <div className="md:col-span-4 md:col-start-9 md:translate-y-24">
           <PortfolioItem
             project={PROJECTS[1]}
             depth={depths[1]}
@@ -188,7 +188,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Item 4 - NIO */}
-        <div className="md:col-span-6 md:col-start-7 md:translate-y-4">
+        <div className="md:col-span-6 md:col-start-7">
           <PortfolioItem
             project={PROJECTS[3]}
             depth={depths[3]}
@@ -199,7 +199,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Item 5 - Stad Mechelen */}
-        <div className="md:col-span-6 md:-translate-y-24">
+        <div className="md:col-span-6 md:translate-y-20">
           <PortfolioItem
             project={PROJECTS[4]}
             depth={depths[4]}
@@ -210,7 +210,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Item 6 - Impact */}
-        <div className="md:col-span-5 md:col-start-8 md:-translate-y-32">
+        <div className="md:col-span-5 md:col-start-8 md:translate-y-12">
           <PortfolioItem
             project={PROJECTS[5]}
             depth={depths[5]}
