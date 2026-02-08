@@ -157,7 +157,7 @@ const Landing28xx: React.FC = () => {
 
           <div className="max-w-3xl mx-auto text-center mt-12 mb-12">
             <p className="text-brand-cream/60 italic text-lg leading-relaxed">
-              "Op mijn website kan ik enkle mijn eigen klanten laten zien maar op LinkedIn zie je de projecten die ik wekelijks mag filmen!"
+              "Op mijn website kan ik enkel mijn eigen klanten laten zien, maar op LinkedIn zie je de projecten die ik wekelijks mag filmen!"
             </p>
           </div>
 
