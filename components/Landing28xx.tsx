@@ -372,10 +372,10 @@ const Landing28xx: React.FC = () => {
           <div className="mt-12 text-center">
             <p className="text-brand-cream/60 mb-4">Liever direct mailen?</p>
             <a
-              href="mailto:info@zegetis.com"
+              href="mailto:daan.hannon@zegetis.com"
               className="text-2xl font-serif text-brand-green hover:text-brand-green/80 transition-colors border-b border-brand-green/30 pb-1"
             >
-              info@zegetis.com
+              daan.hannon@zegetis.com
             </a>
           </div>
         </div>

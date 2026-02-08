@@ -139,7 +139,7 @@ const Portfolio: React.FC = () => {
     <div className="relative min-h-screen bg-brand-black py-20 md:py-40 overflow-hidden px-4 md:px-8 lg:px-20">
       {/* Custom Mouse Indicator - Hidden on mobile */}
       <div
-        className="hidden md:flex custom-cursor items-center justify-center pointer-events-none"
+        className="hidden md:flex fixed top-0 left-0 z-[9999] pointer-events-none items-center justify-center mix-blend-difference transition-opacity duration-300 ease-in-out"
         style={{
           transform: `translate3d(${mousePos.x}px, ${mousePos.y - window.scrollY}px, 0)`,
           opacity: isHoveringItem ? 1 : 0
