@@ -31,15 +31,18 @@ const Landing28xx: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-serif text-5xl md:text-7xl leading-tight mb-8">
-            Zit je te kijken naar wat<br />
-            <span className="italic text-brand-green">je concurrent op Instagram post?</span>
+          <h1 className="font-serif text-5xl md:text-7xl leading-tight mb-8 animate-fade-in-up">
+            Je concurrenten zien er professioneler uit online.<br />
+            <span className="italic relative inline-block whitespace-nowrap">
+              <span className="relative z-10">Tijd om dat om te draaien!</span>
+              <span className="absolute inset-0 bg-brand-green/30 -skew-x-12 transform translate-y-1"></span>
+            </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-brand-cream/80 mb-8">
-            Video zoals Telenet en Primus het krijgen,<br />
-            maar dan voor bedrijven in 28..<br />
-            <span className="text-brand-green font-bold">Agency kwaliteit, KMO prijzen.</span>
+            Van brainstorm tot afwerking, van concept tot content.<br />
+            Eén persoon, volledige controle, nul compromissen op kwaliteit. <br />
+            <span className="text-brand-green font-bold text-lg block mt-4 italic">Grtjs Daan</span>
           </p>
 
           <div className="inline-block bg-brand-green/10 border border-brand-green/30 px-6 py-4 rounded-sm mb-8">
@@ -140,7 +143,7 @@ const Landing28xx: React.FC = () => {
           <div className="text-center mb-12 max-w-4xl mx-auto">
             <p className="text-brand-green/50 uppercase tracking-wider mb-4">Portfolio · 10 jaar filmen</p>
             <h2 className="font-serif text-4xl md:text-6xl italic mb-6 text-brand-cream">
-              Dit niveau, maar dan<br/>
+              Dit niveau, maar dan<br />
               <span className="text-brand-green">voor jouw bedrijf</span>
             </h2>
             <p className="text-brand-cream/70 text-lg">
@@ -152,12 +155,20 @@ const Landing28xx: React.FC = () => {
           {/* Portfolio Component */}
           <Portfolio />
 
-          <div className="text-center mt-16">
+          <div className="max-w-3xl mx-auto text-center mt-12 mb-12">
+            <p className="text-brand-cream/60 italic text-lg leading-relaxed">
+              "Op mijn website kan ik enkle mijn eigen klanten laten zien maar op LinkedIn zie je de projecten die ik wekelijks mag filmen!"
+            </p>
+          </div>
+
+          <div className="text-center mt-8">
             <a
-              href="/#work"
+              href="https://www.linkedin.com/in/cameraman-from-belgium/recent-activity/all/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-brand-cream hover:text-brand-green font-bold transition-colors"
             >
-              Volledig portfolio bekijken
+              Bekijk mijn LinkedIn
               <span className="text-xl">→</span>
             </a>
           </div>
@@ -205,7 +216,7 @@ const Landing28xx: React.FC = () => {
             <div className="relative">
               <div className="bg-brand-cream rounded-sm p-10 shadow-2xl">
                 <h3 className="font-serif text-3xl text-brand-black mb-6">
-                  Wat 28% korting<br/>
+                  Wat 28% korting<br />
                   <span className="text-brand-green italic">echt betekent</span>
                 </h3>
                 <div className="space-y-4 text-brand-black/80">
@@ -355,6 +366,17 @@ const Landing28xx: React.FC = () => {
                 Boek een Draaidag →
               </a>
             </div>
+          </div>
+
+          {/* Email Option */}
+          <div className="mt-12 text-center">
+            <p className="text-brand-cream/60 mb-4">Liever direct mailen?</p>
+            <a
+              href="mailto:info@zegetis.com"
+              className="text-2xl font-serif text-brand-green hover:text-brand-green/80 transition-colors border-b border-brand-green/30 pb-1"
+            >
+              info@zegetis.com
+            </a>
           </div>
         </div>
       </section>
