@@ -271,7 +271,7 @@ const Landing28xx: React.FC = () => {
                             <p className="text-brand-black/70 leading-relaxed mb-4">
                                 Van bedrijfsvideo's tot commerciële content en testimonials. Elk project krijgt dezelfde high-end kwaliteit die grote merken verwachten.
                             </p>
-                            <p className="text-brand-green font-bold">Vanaf €1.500 (28% korting)</p>
+                            <p className="text-brand-green font-bold">Vanaf €1.500 (incl 28% korting)</p>
                         </div>
 
                         <div className="bg-white p-8 rounded-sm shadow-lg">
@@ -280,7 +280,7 @@ const Landing28xx: React.FC = () => {
                             <p className="text-brand-black/70 leading-relaxed mb-4">
                                 Professionele bedrijfsfotografie, productfoto's en portfolio shoots. Beelden die je merk naar een hoger niveau tillen.
                             </p>
-                            <p className="text-brand-green font-bold">Combos vanaf €960</p>
+                            <p className="text-brand-green font-bold">Combos vanaf €960 (incl 28% korting)</p>
                         </div>
 
                         <div className="bg-white p-8 rounded-sm shadow-lg">
@@ -289,7 +289,7 @@ const Landing28xx: React.FC = () => {
                             <p className="text-brand-black/70 leading-relaxed mb-4">
                                 Van strategie tot executie. Ik help je content creëren die écht impact maakt op je doelgroep.
                             </p>
-                            <p className="text-brand-green font-bold">Full-service pakket €4.300</p>
+                            <p className="text-brand-green font-bold">Full-service pakket €4.300 (incl 28% korting)</p>
                         </div>
                     </div>
                 </div>
