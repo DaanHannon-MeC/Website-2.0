@@ -26,7 +26,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans selection:bg-brand-green selection:text-brand-cream bg-brand-black">
       <Header isScrolled={isScrolled} />
-      
+
       <main>
         <section id="hero">
           <Hero />
@@ -42,12 +42,29 @@ const App: React.FC = () => {
 
         <section id="work" className="bg-brand-black">
           <div className="container mx-auto px-8 md:px-12 pt-32 pb-0">
-             <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
-                <h2 className="font-serif text-6xl md:text-[8vw] italic leading-none tracking-tighter">Selected <span className="text-brand-green">Works</span></h2>
-                <p className="text-brand-cream/40 tracking-widest uppercase text-xs font-bold">Scroll to explore</p>
-             </div>
+            <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
+              <h2 className="font-serif text-6xl md:text-[8vw] italic leading-none tracking-tighter">Selected <span className="text-brand-green">Works</span></h2>
+              <p className="text-brand-cream/40 tracking-widest uppercase text-xs font-bold">Scroll to explore</p>
+            </div>
           </div>
           <Portfolio />
+
+          <div className="container mx-auto px-8 md:px-12 mt-12 mb-20">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-brand-cream/60 italic text-lg leading-relaxed mb-8">
+                "Op mijn website kan ik enkel mijn eigen klanten laten zien, maar op LinkedIn zie je de projecten die ik wekelijks mag filmen!"
+              </p>
+              <a
+                href="https://www.linkedin.com/in/cameraman-from-belgium/recent-activity/all/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-brand-cream hover:text-brand-green font-bold transition-all group"
+              >
+                Bekijk mijn LinkedIn
+                <span className="text-xl transition-transform group-hover:translate-x-1">→</span>
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="values" className="bg-brand-black py-40 border-y border-brand-cream/5">
