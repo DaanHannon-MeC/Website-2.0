@@ -136,7 +136,7 @@ const Portfolio: React.FC = () => {
   const depths = [1, 3, 2, 4, 1.5, 2.5];
 
   return (
-    <div className="relative min-h-screen bg-brand-black py-20 md:py-40 overflow-hidden px-4 md:px-8 lg:px-20">
+    <div className="relative min-h-screen bg-brand-black pt-20 pb-40 md:pt-40 md:pb-60 px-4 md:px-8 lg:px-20">
       {/* Custom Mouse Indicator - Hidden on mobile */}
       <div
         className="hidden md:flex fixed top-0 left-0 z-[9999] pointer-events-none items-center justify-center mix-blend-difference transition-opacity duration-300 ease-in-out"
@@ -199,7 +199,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Item 5 - Stad Mechelen */}
-        <div className="md:col-span-6 md:translate-y-20">
+        <div className="md:col-span-6 md:translate-y-12">
           <PortfolioItem
             project={PROJECTS[4]}
             depth={depths[4]}
@@ -210,7 +210,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Item 6 - Impact */}
-        <div className="md:col-span-5 md:col-start-8 md:translate-y-12">
+        <div className="md:col-span-5 md:col-start-8">
           <PortfolioItem
             project={PROJECTS[5]}
             depth={depths[5]}
