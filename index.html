@@ -25,6 +25,83 @@
     gtag('config', 'G-JH9JGB3CVQ');
   </script>
 
+  <!-- GA4 Event Tracking for Conversions -->
+  <script>
+    // Wait for DOM to be ready
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // TRACK CONTACT BUTTON CLICKS
+      document.querySelectorAll('a[href*="contact"], button[class*="contact"]').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          gtag('event', 'close_convert_lead', {
+            'event_category': 'contact',
+            'event_label': 'contact_button_click',
+            'value': 1
+          });
+          console.log('GA4 Event: close_convert_lead (contact button)');
+        });
+      });
+
+      // TRACK PHONE NUMBER CLICKS
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          var phoneNumber = this.getAttribute('href').replace('tel:', '');
+          gtag('event', 'qualify_lead', {
+            'event_category': 'contact',
+            'event_label': 'phone_click',
+            'phone_number': phoneNumber
+          });
+          console.log('GA4 Event: qualify_lead (phone click)');
+        });
+      });
+
+      // TRACK EMAIL CLICKS
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          var email = this.getAttribute('href').replace('mailto:', '');
+          gtag('event', 'qualify_lead', {
+            'event_category': 'contact',
+            'event_label': 'email_click',
+            'email': email
+          });
+          console.log('GA4 Event: qualify_lead (email click)');
+        });
+      });
+
+      // TRACK FORM SUBMISSIONS
+      document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function(e) {
+          if (this.checkValidity()) {
+            gtag('event', 'close_convert_lead', {
+              'event_category': 'form',
+              'event_label': 'form_submission',
+              'form_name': this.getAttribute('name') || this.getAttribute('id') || 'unnamed_form'
+            });
+            console.log('GA4 Event: close_convert_lead (form submission)');
+          }
+        });
+      });
+
+      console.log('✅ GA4 event tracking initialized for Zegetis');
+    });
+
+    // TRACK OUTBOUND LINKS
+    document.addEventListener('click', function(e) {
+      var target = e.target.closest('a');
+      if (target && target.href) {
+        var hostname = new URL(target.href).hostname;
+        if (hostname && hostname !== window.location.hostname) {
+          gtag('event', 'click', {
+            'event_category': 'outbound',
+            'event_label': target.href,
+            'transport_type': 'beacon'
+          });
+          console.log('GA4 Event: Outbound link to ' + hostname);
+        }
+      }
+    });
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 

@@ -25,6 +25,31 @@
     gtag('config', 'G-JH9JGB3CVQ');
   </script>
 
+  <!-- GA4 Event Tracking for Conversions -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href*="contact"], button[class*="contact"]').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          gtag('event', 'close_convert_lead', {'event_category': 'contact', 'event_label': 'contact_button_click', 'value': 1});
+          console.log('GA4 Event: close_convert_lead (contact button)');
+        });
+      });
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          gtag('event', 'qualify_lead', {'event_category': 'contact', 'event_label': 'phone_click'});
+          console.log('GA4 Event: qualify_lead (phone click)');
+        });
+      });
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          gtag('event', 'qualify_lead', {'event_category': 'contact', 'event_label': 'email_click'});
+          console.log('GA4 Event: qualify_lead (email click)');
+        });
+      });
+      console.log('✅ GA4 event tracking initialized (28XX page)');
+    });
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
