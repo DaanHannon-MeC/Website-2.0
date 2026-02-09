@@ -11,8 +11,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   // ===== TRACK CONTACT BUTTON CLICKS =====
-  // Tracks clicks on buttons/links with text containing "contact", "offerte", "gratis gesprek", etc.
-  document.querySelectorAll('a[href*="contact"], button[class*="contact"], a:contains("Contact"), a:contains("Offerte"), a:contains("Zeget\'is call")').forEach(function(element) {
+  // Tracks clicks on buttons/links with contact-related hrefs and classes
+  document.querySelectorAll('a[href*="contact"], button[class*="contact"]').forEach(function(element) {
     element.addEventListener('click', function(e) {
       gtag('event', 'close_convert_lead', {
         'event_category': 'contact',
