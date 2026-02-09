@@ -1,61 +1,71 @@
 /**
- * Google Analytics 4 Event Tracking for Zeget'is
- * Add this code to your website to track conversions
+ * GA4 Event Tracking for Zeget'is
+ * Measurement ID: G-JH9JGB3CVQ
  *
- * INSTALLATION:
- * Place this script in your main JS file or add it before </body> tag
- * Make sure GA4 base code (G-JH9JGB3CVQ) is already loaded
+ * Tracks: calendar bookings, email clicks, contact navigation,
+ * 28XX landing visits, insights visits, outbound links
  */
 
-// Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ===== TRACK CONTACT BUTTON CLICKS =====
-  // Tracks clicks on buttons/links with contact-related hrefs and classes
-  document.querySelectorAll('a[href*="contact"], button[class*="contact"]').forEach(function(element) {
-    element.addEventListener('click', function(e) {
+  // Guard: make sure gtag exists before tracking anything
+  if (typeof gtag !== 'function') {
+    console.warn('GA4: gtag not loaded, skipping event tracking');
+    return;
+  }
+
+  // ===== TRACK CALENDAR BOOKING CLICKS (main conversion) =====
+  // These are the actual CTAs: "Plan een Babbel" and "Boek een Draaidag"
+  document.querySelectorAll('a[href*="calendar.app.google"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var href = this.getAttribute('href') || '';
+      var isKennismaking = href.includes('XKjMXfBMbewQ5MKc6');
       gtag('event', 'close_convert_lead', {
-        'event_category': 'contact',
-        'event_label': 'contact_button_click',
+        'event_category': 'booking',
+        'event_label': isKennismaking ? 'kennismakingsgesprek' : 'draaidag_booking',
         'value': 1
       });
-      console.log('GA4 Event: close_convert_lead (contact button)');
-    });
-  });
-
-  // ===== TRACK PHONE NUMBER CLICKS =====
-  // Tracks clicks on phone number links (tel: links)
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(element) {
-    element.addEventListener('click', function(e) {
-      var phoneNumber = this.getAttribute('href').replace('tel:', '');
-      gtag('event', 'qualify_lead', {
-        'event_category': 'contact',
-        'event_label': 'phone_click',
-        'phone_number': phoneNumber
-      });
-      console.log('GA4 Event: qualify_lead (phone click)');
+      console.log('GA4 Event: close_convert_lead (' + (isKennismaking ? 'kennismakingsgesprek' : 'draaidag') + ')');
     });
   });
 
   // ===== TRACK EMAIL CLICKS =====
-  // Tracks clicks on email links (mailto: links)
-  document.querySelectorAll('a[href^="mailto:"]').forEach(function(element) {
-    element.addEventListener('click', function(e) {
-      var email = this.getAttribute('href').replace('mailto:', '');
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+    el.addEventListener('click', function() {
       gtag('event', 'qualify_lead', {
         'event_category': 'contact',
-        'event_label': 'email_click',
-        'email': email
+        'event_label': 'email_click'
       });
       console.log('GA4 Event: qualify_lead (email click)');
     });
   });
 
+  // ===== TRACK PHONE CLICKS (if added in future) =====
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'qualify_lead', {
+        'event_category': 'contact',
+        'event_label': 'phone_click'
+      });
+      console.log('GA4 Event: qualify_lead (phone click)');
+    });
+  });
+
+  // ===== TRACK CONTACT SECTION NAVIGATION =====
+  // Clicks on links that scroll to the contact/calendar section
+  document.querySelectorAll('a[href="#contact"], a[href="/#contact"], a[href="#calendar"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'qualify_lead', {
+        'event_category': 'navigation',
+        'event_label': 'contact_section_click'
+      });
+      console.log('GA4 Event: qualify_lead (contact section nav)');
+    });
+  });
+
   // ===== TRACK FORM SUBMISSIONS =====
-  // Tracks all form submissions (contact forms, quote requests, etc.)
   document.querySelectorAll('form').forEach(function(form) {
-    form.addEventListener('submit', function(e) {
-      // Only track if form has required fields filled
+    form.addEventListener('submit', function() {
       if (this.checkValidity()) {
         gtag('event', 'close_convert_lead', {
           'event_category': 'form',
@@ -68,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ===== TRACK 28XX LANDING PAGE VISITS =====
-  // Special tracking for your 28XX regional landing page
   if (window.location.pathname.includes('28xx') || window.location.pathname.includes('28XX')) {
     gtag('event', 'page_view', {
       'page_title': '28XX Regional Landing',
@@ -80,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ===== TRACK INSIGHTS/BLOG PAGE VISITS =====
-  // Track visits to blog/insights pages (high-intent content)
   if (window.location.pathname.includes('insights') || window.location.pathname.includes('blog')) {
     gtag('event', 'page_view', {
       'page_title': document.title,
@@ -91,23 +99,38 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('GA4 Event: Insights page view');
   }
 
-  console.log('✅ GA4 event tracking initialized for Zeget\'is');
+  // ===== CAPTURE UTM PARAMETERS =====
+  var params = new URLSearchParams(window.location.search);
+  var source = params.get('utm_source');
+  if (source) {
+    gtag('event', 'campaign_visit', {
+      'event_category': 'acquisition',
+      'utm_source': source,
+      'utm_medium': params.get('utm_medium') || '',
+      'utm_campaign': params.get('utm_campaign') || ''
+    });
+    console.log('GA4 Event: campaign_visit (source: ' + source + ')');
+  }
+
+  console.log('GA4 event tracking initialized');
 });
 
-// ===== HELPER: Track outbound links =====
-// Useful for tracking clicks to your social media, portfolio, etc.
+// ===== TRACK OUTBOUND LINKS =====
 document.addEventListener('click', function(e) {
-  var target = e.target.closest('a');
-  if (target && target.href) {
-    var hostname = new URL(target.href).hostname;
-    // Track if link goes to external domain
-    if (hostname && hostname !== window.location.hostname) {
+  var link = e.target.closest('a');
+  if (!link || !link.href) return;
+
+  try {
+    var hostname = new URL(link.href).hostname;
+    if (hostname && hostname !== window.location.hostname && !hostname.includes('calendar.app.google')) {
       gtag('event', 'click', {
         'event_category': 'outbound',
-        'event_label': target.href,
+        'event_label': link.href,
         'transport_type': 'beacon'
       });
-      console.log('GA4 Event: Outbound link click to ' + hostname);
+      console.log('GA4 Event: Outbound click to ' + hostname);
     }
+  } catch (err) {
+    // invalid URL, skip
   }
 });
