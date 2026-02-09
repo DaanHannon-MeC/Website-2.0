@@ -8,12 +8,16 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
 
-    // Set default consent mode for EER users
+    // Check for existing consent in localStorage
+    const savedConsent = localStorage.getItem('cookieConsent');
+    const isConsentGranted = savedConsent === 'accepted';
+
+    // Set initial consent mode
     gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
+      'analytics_storage': isConsentGranted ? 'granted' : 'denied',
+      'ad_storage': isConsentGranted ? 'granted' : 'denied',
+      'ad_user_data': isConsentGranted ? 'granted' : 'denied',
+      'ad_personalization': isConsentGranted ? 'granted' : 'denied',
       'wait_for_update': 500
     });
 

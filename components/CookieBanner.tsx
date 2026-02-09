@@ -18,7 +18,10 @@ const CookieBanner: React.FC = () => {
     // Enable Google Analytics tracking
     if (window.gtag) {
       window.gtag('consent', 'update', {
-        analytics_storage: 'granted'
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
       });
     }
     closeBanner();
@@ -29,7 +32,10 @@ const CookieBanner: React.FC = () => {
     // Disable Google Analytics tracking
     if (window.gtag) {
       window.gtag('consent', 'update', {
-        analytics_storage: 'denied'
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
       });
     }
     closeBanner();
@@ -47,9 +53,8 @@ const CookieBanner: React.FC = () => {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 transition-all duration-500 ${
-        isExiting ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'
-      }`}
+      className={`fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 transition-all duration-500 ${isExiting ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+        }`}
     >
       <div className="container mx-auto max-w-4xl">
         <div className="bg-brand-black/95 backdrop-blur-lg border border-brand-green/20 rounded-2xl shadow-2xl overflow-hidden">
