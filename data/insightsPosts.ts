@@ -1,6 +1,9 @@
 import { post1Content } from './blog-content/post1';
 import { post2Content } from './blog-content/post2';
+import { post1Content } from './blog-content/post1';
+import { post2Content } from './blog-content/post2';
 import { post3Content } from './blog-content/post3';
+import { post4Content } from './blog-content/post4';
 
 export interface InsightsPost {
   id: string;
@@ -101,6 +104,30 @@ export const insightsPosts: InsightsPost[] = [
         headline: 'Videograaf Kiezen? 7 Vragen Die Niemand Vertelt',
         description: 'Iedereen toont reels. Niemand legt uit hoe ze werken. 7 vragen die kwaliteit onthullen. Van filmmaker met 10 jaar ervaring.',
         datePublished: '2025-12-28',
+        author: 'Daan Hannon',
+        publisher: "Zeget'is"
+      }
+    }
+  },
+  {
+    id: '4',
+    slug: 'cinematografische-kwaliteit-onder-10000-euro',
+    title: 'Cinematografische Kwaliteit voor Minder dan €10.000',
+    excerpt: 'Alle agencies beloven cinematografische kwaliteit voor onder €10k. Maar de echte kosten? Ontdek waar het geld op een set naartoe gaat en hoe je dezelfde waarde krijgt zonder markup.',
+    metaDescription: 'Agency-kwaliteit voor onder €10k? Ontdek waar het geld écht naartoe gaat en hoe je professionele video krijgt zonder marketing markup.',
+    date: '2026-02-13',
+    image: '/assets/insights/cinematografische-kwaliteit-directe-productie.jpg',
+    category: 'Prijzen & Kosten',
+    content: post4Content,
+    seo: {
+      keywords: {
+        primary: 'cinematografische video kosten',
+        secondary: ['agency productiekosten', 'directe videoproductie', 'professionele video budget']
+      },
+      schema: {
+        headline: 'Cinematografische Kwaliteit voor Minder dan €10.000',
+        description: 'Agency-kwaliteit voor onder €10k? Ontdek waar het geld écht naartoe gaat en hoe je professionele video krijgt zonder marketing markup.',
+        datePublished: '2026-02-13',
         author: 'Daan Hannon',
         publisher: "Zeget'is"
       }
