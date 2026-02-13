@@ -35,7 +35,9 @@ export const post4Content = {
 <li>"Voor de kwaliteit die je verwacht adviseren we het premium package..."</li>
 </ul>
 
-<p class="mt-4">Je eindigt uiteindelijk tussen €18k en €35k voor wat "onder €10k" werd gepitcht.</p>`
+<p class="mt-4">Je eindigt uiteindelijk tussen €18k en €35k voor wat "onder €10k" werd gepitcht.</p>
+
+<img src="/assets/insights/bts-agency-shoot-1.jpg" alt="Agency shoot met grote crew en complexe setup" class="w-full my-8 rounded-lg" loading="lazy" />`
     },
     {
       heading: '2. Het direct-model in cijfers',
@@ -182,6 +184,8 @@ Wat we overgeslagen:<br/>
 <li>Post-production uitbesteed aan freelancers voor €50-€80/uur. Gefactureerd aan de klant voor €150-€200/uur.</li>
 </ul>
 
+<img src="/assets/insights/bts-lidl-professional-setup.jpg" alt="Professionele productie setup bij Lidl shoot" class="w-full my-8 rounded-lg" loading="lazy" />
+
 <h3>Het Moment Dat Ik Besloot Te Stoppen:</h3>
 
 <p class="mt-4">Na een shoot waar ik als freelancer ingehuurd was, zag ik de factuur die naar de klant ging. Ze betaalden €22.000. Ik kreeg €2.800 voor 2 dagen werk + editing.</p>
@@ -251,29 +255,9 @@ Vraag Offerte Aan →
 </div>
 </div>
 
-<div class="mt-8 bg-brand-black/50 border border-brand-green/30 p-6 rounded-lg">
-<p class="text-lg font-bold text-brand-green mb-2">🎯 Perfecte Timing Om Dit Te Lezen:</p>
-<p class="text-sm">Je hebt waarschijnlijk net quotes ontvangen van agencies en zit te twijfelen. "Waarom is er zo'n verschil?"</p>
-<p class="text-sm mt-2">Nu weet je het. En nu kun je een geïnformeerde keuze maken.</p>
-<p class="text-sm mt-4"><strong>Agency-kwaliteit zonder agency markup. Dat is de Zeget'is belofte.</strong></p>
-</div>
-
-<h3 class="mt-10 mb-4">Meer Lezen Over Videoproductie Prijzen:</h3>
-<div class="space-y-3">
-<a href="/insights/bedrijfsvideo-mechelen-kosten-prijzen-2026" class="block bg-brand-cream/5 border border-brand-green/20 p-4 rounded hover:border-brand-green/40 transition-colors">
-<span class="text-brand-green text-sm font-bold">📖 ARTIKEL 1</span>
-<p class="font-bold mt-1">Bedrijfsvideo Mechelen: Kosten & Prijzen 2026</p>
-<p class="text-sm text-brand-cream/60 mt-1">Volledige breakdown van wat een bedrijfsvideo kost in Mechelen. Van €2.100 tot €6.000+.</p>
-</a>
-
-<a href="/insights/videograaf-kiezen-7-essentiële-vragen" class="block bg-brand-cream/5 border border-brand-green/20 p-4 rounded hover:border-brand-green/40 transition-colors">
-<span class="text-brand-green text-sm font-bold">📖 ARTIKEL 2</span>
-<p class="font-bold mt-1">Videograaf Kiezen? 7 Vragen Die Niemand Vertelt</p>
-<p class="text-sm text-brand-cream/60 mt-1">De juiste vragen om te stellen voordat je een videograaf kiest. Ontdek wat échte kwaliteit onthult.</p>
-</a>
-</div>
-
-<p class="mt-10 text-center text-brand-cream/60 text-sm italic">"Transparantie > marketing bullshit. Altijd." — Daan Hannon, Zeget'is</p>`
+<p class="mt-8 text-center text-brand-cream/60 text-sm">
+→ <a href="/insights/videograaf-kiezen-7-essentiële-vragen" class="text-brand-green hover:underline">Lees eerst: 7 vragen om de juiste videograaf te kiezen</a>
+</p>`
     }
   ]
 };
